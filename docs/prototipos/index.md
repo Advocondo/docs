@@ -13,7 +13,6 @@ Catálogo das telas do projeto no Figma, com o vínculo de cada uma à página q
 
 | Origem | Significado |
 | --- | --- |
-| **Importado** | O frame é a importação da folha HTML do repositório e não foi alterado. A captura da página vem da mesma folha e vale como referência fiel. |
 | **Editado no Figma** | O frame herdou o nó da importação (`34:…`), mas o conteúdo foi alterado no Figma. A página mostra a tela de origem do repositório e descreve o estado atual a partir do arquivo. |
 | **Criado no Figma** | O frame não existe no repositório. Foi criado no Figma, em geral duplicando uma tela vizinha. |
 
@@ -55,7 +54,3 @@ As telas editadas e criadas no Figma cobrem os módulos abaixo. A barra lateral 
 A [cobertura das histórias de usuário](cobertura-historias.md) cruza as 40 [histórias de usuário](../historias/index.md) com essas telas e aponta, por história, o que atende, o que é parcial e o que ainda não foi desenhado.
 
 O repositório mantém, em paralelo, protótipos estáticos de requisito em `prototipos/` (uma tela por HTML, compostos só com componentes do design system e ligados às histórias de usuário). Eles validam requisitos; o Figma explora a solução visual. Quando as duas frentes divergirem, registre a decisão aqui e no cabeçalho de premissas da tela HTML.
-
-## Capturas pendentes
-
-As capturas das telas **editadas** ou **criadas** no Figma ainda não foram exportadas: o servidor MCP do Figma atingiu o limite de chamadas do plano Starter durante a montagem desta documentação. Cada página indica o nome de arquivo esperado em `assets/prototipos/`; basta exportar o frame em PNG a 1x pelo Figma e salvar com esse nome para a imagem aparecer.
