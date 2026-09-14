@@ -53,4 +53,6 @@ As telas editadas e criadas no Figma cobrem os módulos abaixo. A barra lateral 
 
 A [cobertura das histórias de usuário](cobertura-historias.md) cruza as 40 [histórias de usuário](../historias/index.md) com essas telas e aponta, por história, o que atende, o que é parcial e o que ainda não foi desenhado.
 
+A versão **mobile** dessas telas, em 390px e com as lacunas do Figma já resolvidas, está em [Protótipos mobile](mobile/index.md).
+
 O repositório mantém, em paralelo, protótipos estáticos de requisito em `prototipos/` (uma tela por HTML, compostos só com componentes do design system e ligados às histórias de usuário). Eles validam requisitos; o Figma explora a solução visual. Quando as duas frentes divergirem, registre a decisão aqui e no cabeçalho de premissas da tela HTML.
