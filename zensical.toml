@@ -27,6 +27,29 @@ nav = [
   { "Rastreabilidade" = [
     { "Matriz de rastreabilidade" = "rastreabilidade/matriz.md" },
   ]},
+  { "Design system" = [
+    { "Visão geral" = "design-system/index.md" },
+    { "Fundamentos" = "design-system/fundamentos.md" },
+    { "Componentes" = "design-system/componentes.md" },
+    { "Regras e ressalvas" = "design-system/regras.md" },
+  ]},
+  { "Protótipos" = [
+    { "Visão geral" = "prototipos/index.md" },
+    { "Cobertura das histórias" = "prototipos/cobertura-historias.md" },
+    { "Site institucional" = "prototipos/site-institucional.md" },
+    { "Login" = "prototipos/login.md" },
+    { "Redefinir Senha" = "prototipos/redefinir-senha.md" },
+    { "Painel" = "prototipos/painel.md" },
+    { "Acordos" = "prototipos/acordos.md" },
+    { "Detalhes do Acordo" = "prototipos/detalhes-do-acordo.md" },
+    { "Acompanhamento Mensal" = "prototipos/acompanhamento-mensal.md" },
+    { "Condomínios" = "prototipos/condominios.md" },
+    { "Metas e Comissões" = "prototipos/metas-e-comissoes.md" },
+    { "Trilha de auditoria" = "prototipos/trilha-de-auditoria.md" },
+    { "Gestão de Usuários" = "prototipos/gestao-de-usuarios.md" },
+    { "Perfil" = "prototipos/perfil.md" },
+    { "Sobreposições" = "prototipos/sobreposicoes.md" },
+  ]},
 ]
 
 [project.theme]
