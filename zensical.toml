@@ -27,6 +27,9 @@ nav = [
   { "Rastreabilidade" = [
     { "Matriz de rastreabilidade" = "rastreabilidade/matriz.md" },
   ]},
+  { "Infraestrutura" = [
+    { "Deploy" = "infraestrutura/deploy.md" },
+  ]},
   { "Design system" = [
     { "Visão geral" = "design-system/index.md" },
     { "Fundamentos" = "design-system/fundamentos.md" },
