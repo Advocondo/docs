@@ -8,13 +8,14 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 - Um item = uma pendência acionável, com ID estável (`DT-nnn`, nunca reaproveitado), origem e como resolver.
 - **Tipo:** `bloqueio` (impede avançar) · `ação manual` (só o Mateus/time pode fazer) · `dívida` (código/doc a melhorar) · `fora do escopo` (decisão de adiar) · `decisão` (confirmar com PO/time).
 - **Status:** `aberto` · `em andamento` · `resolvido`.
+- **Branches:** sempre `US-XX-nome-da-us` (ex.: `US-12-cadastrar-condominio`), o mesmo nome em back, front e docs.
 - Mudanças deste arquivo vão no PR da US que as originou (ou em um PR próprio quando for só atualização).
 
 ## Abertos
 
 | ID | Tipo | Origem | Repo | Pendência | Como resolver | Status |
 |---|---|---|---|---|---|---|
-| DT-001 | bloqueio | US12 | back/front/docs | O Claude GitHub App não tem acesso à org Advocondo: `git push` e edição de issues retornam 403. Branches e commits estão só locais. | Owner da org instala o app em https://github.com/apps/claude/installations/select_target ou Mateus reconecta o GitHub em claude.ai. Depois: push, PRs com `Closes #N`, atribuir issues a `matix0`. | aberto |
+| DT-001 | bloqueio | US12 | back/front/docs | O Claude GitHub App não tem acesso à org Advocondo: `git push` e edição de issues retornam 403. Branches (`US-12-cadastrar-condominio`) e commits estão só locais. | Owner da org instala o app em https://github.com/apps/claude/installations/select_target ou Mateus reconecta o GitHub em claude.ai. Depois: push, PRs com `Closes #N`, atribuir issues a `matix0`. | aberto |
 | DT-002 | bloqueio | US12 | front | Sem acesso a `Advocondo/ui-kit` (privado): o front da US12 não pode ser implementado com o design system. | Liberar o acesso (mesmo passo do DT-001) ou colar README/componentes; depois seguir `LIBRARY.md`. | aberto |
 | DT-003 | ação manual | US12 | front | Token read-only do GitHub nos segredos do GitHub Actions e da Vercel para o `npm ci` instalar o ui-kit (`github:Advocondo/ui-kit`). | Criar o token, configurar `UI_KIT_TOKEN` (nome a definir) no CI e na Vercel; documentar em `docs/segredos` do front. | aberto |
 | DT-004 | ação manual | US12 | back | As migrations não rodam sozinhas no deploy. | Coolify → back-end → *Pre-deployment command*: `alembic upgrade head` (ver `docs/migrations.md`). Fazer antes do primeiro deploy com a tabela `condominios`. | aberto |
