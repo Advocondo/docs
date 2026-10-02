@@ -30,6 +30,7 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 | DT-017 | ação manual | US12 | front | `NEXT_PUBLIC_API_URL` é embutida no build: sem ela o front aponta para `http://localhost:8000`. | Definir a variável na Vercel (produção e preview) com a URL https do back e conferir `CORS_ALLOW_ORIGINS`/regex de preview no Coolify. | aberto |
 | DT-018 | dívida | US12 | front | As mudanças nos `Dockerfile`/`Dockerfile.dev` (git no Alpine, `ARG NEXT_PUBLIC_API_URL`) não foram testadas: sem Docker no ambiente. | Rodar `docker build --build-arg NEXT_PUBLIC_API_URL=... .` e `docker build -f Dockerfile.dev .` uma vez. | aberto |
 | DT-019 | dívida | US12 | front | `@types/node` subiu de ^20 para ^22 (exigência do Vitest 5; CI e Docker já usam Node 22). | Nenhuma ação, apenas ciência: confirmar que o CI ficou verde. | aberto |
+| DT-020 | dívida | US12 | front | A listagem carrega os dados no navegador (`useEffect`), pois ainda não há login. A página já é um Server Component fino, mas a busca inicial não é renderizada no servidor. | Com a US02, avaliar buscar a 1ª página no servidor (fetch com token) e passar à view client como prop. | aberto |
 
 ## Resolvidos
 
@@ -39,9 +40,14 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 | DT-008 | 01/10/2026 | Postgres 18.6 instalado localmente (mesma versão do CI): 78 testes passando, `alembic upgrade head`/`downgrade base` OK. |
 | DT-002 | 02/10/2026 | O `ui-kit` é público (sem token). Instalação via git exigiu o script `prepare` (PR [ui-kit#1](https://github.com/Advocondo/ui-kit/pull/1)). |
 | DT-013 | 02/10/2026 | Front da US12 tem ação Editar por linha e o botão correto "Salvar condomínio". Falta avisar o design (o Figma ainda diz "Salvar prazo"). |
+| Revisão US12 (1) | 02/10/2026 | Back: erros de negócio registrados uma vez por módulo (`advocondo/errors.py` + `register_errors`), sem try/except por endpoint. |
+| Revisão US12 (2) | 02/10/2026 | Front: `Field` e `Section` movidos para `app/components/FormField.tsx` para reuso nas próximas telas. |
+| Revisão US12 (3) | 02/10/2026 | Front: `page.tsx` virou Server Component fino com `metadata`; interação em `CondominiosView` (client). Resta o DT-020. |
+| Revisão US12 (4) | 02/10/2026 | Front: `UFS.ts` renomeado para `ufs.ts`. |
 
 ## Histórico
 
 - 01/10/2026 — Arquivo criado; DT-001 a DT-013 levantados na US12 (back).
 - 01/10/2026 — DT-001 e DT-008 resolvidos.
 - 02/10/2026 — Front da US12 entregue; DT-002 e DT-013 resolvidos; DT-003 reformulado; DT-014 a DT-019 levantados.
+- 02/10/2026 — Revisão de arquitetura da US12: 4 correções aplicadas (back e front); DT-020 levantado.
