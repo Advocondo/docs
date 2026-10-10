@@ -23,8 +23,8 @@ icon: lucide/users
 > **Como** Administrador, **eu quero** convidar um novo colaborador informando e-mail e nível de acesso (Equipe Operacional ou Cliente), **para que** ele acesse o sistema com as permissões corretas.
 
 - **Perfil:** Administrador
-- **Depende de:** —
-- **Relaciona-se com:** [US02](ep01-portal-autenticacao.md#us02) · [US05](ep01-portal-autenticacao.md#us05) · [US09](#us09) · [US10](#us10) · [US11](#us11) · [US18](ep03-cadastro-acordos.md#us18)
+- **Depende de:** [US02](ep01-portal-autenticacao.md#us02) (o Administrador precisa estar logado)
+- **Relaciona-se com:** [US05](ep01-portal-autenticacao.md#us05) · [US09](#us09) · [US10](#us10) · [US11](#us11) · [US18](ep03-cadastro-acordos.md#us18)
 
 **Critérios de aceitação**
 
