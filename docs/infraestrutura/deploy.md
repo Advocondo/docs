@@ -48,20 +48,36 @@ O [Coolify](https://coolify.io) roda em uma instância da Oracle Cloud e faz o b
 
 ### Primeiro deploy: criar o Administrador
 
-Os usuários entram no sistema por convite ([US07](../historias/ep02-usuarios-perfis.md#us07)), e só um Administrador logado pode convidar. Por isso, depois do primeiro deploy, o primeiro usuário é criado por um comando, uma única vez. Ele já nasce como Administrador ativo e pode fazer login ([US02](../historias/ep01-portal-autenticacao.md#us02)).
+Os usuários entram no sistema por convite ([US07](../historias/ep02-usuarios-perfis.md#us07)), e só um Administrador logado pode convidar. Por isso, depois do primeiro deploy, o primeiro usuário é criado uma única vez pela rota `POST /setup` da API. Ele já nasce como Administrador ativo e pode fazer login ([US02](../historias/ep01-portal-autenticacao.md#us02)).
 
-1. Confirme que o deploy terminou e que as migrations rodaram (`GET /health/ready` responde `200`).
-2. No Coolify, abra o recurso do back-end e vá em **Terminal**.
-3. Rode, com o e-mail e o nome de quem vai administrar o sistema:
+A rota é protegida pela variável `SETUP_TOKEN`: ela só responde a quem envia esse valor no cabeçalho `X-Setup-Token`. Com a variável vazia, a rota fica desligada.
+
+1. Gere um token aleatório, com pelo menos 32 caracteres:
 
     ```bash
-    python -m advocondo.users.create_admin --email admin@escritorio.com.br --name "Nome do Administrador"
+    openssl rand -hex 32
     ```
 
-4. Digite a senha duas vezes, com pelo menos 8 caracteres. A senha é lida pelo terminal e não fica no histórico do shell.
-5. Faça login no front com esse e-mail e essa senha.
+2. No Coolify, abra o recurso do back-end, defina a variável `SETUP_TOKEN` com esse valor e faça o redeploy. Com menos de 32 caracteres, a API não sobe.
+3. Confirme que o deploy terminou e que as migrations rodaram (`GET /health/ready` responde `200`).
+4. Crie o Administrador, com o e-mail, o nome e a senha (pelo menos 8 caracteres) de quem vai administrar o sistema:
 
-O comando só funciona com o banco vazio. Se já existir algum usuário, ele recusa com a mensagem "O primeiro usuário já foi criado. Os demais entram por convite.", então não serve para criar outros administradores depois. Os detalhes, incluindo como corrigir um e-mail digitado errado, estão em `docs/auth.md` no repositório do back-end.
+    ```bash
+    curl -X POST https://<endereço-da-api>/setup \
+      -H "Content-Type: application/json" \
+      -H "X-Setup-Token: <token-gerado>" \
+      -d '{"email": "admin@escritorio.com.br", "name": "Nome do Administrador", "password": "<senha>"}'
+    ```
+
+    A resposta `201` traz os dados do usuário criado.
+
+5. No Coolify, deixe `SETUP_TOKEN` vazio e faça o redeploy. A partir daí, a rota responde `404`.
+6. Faça login no front com esse e-mail e essa senha.
+
+A rota só funciona com o banco vazio. Se já existir algum usuário, ela recusa com a mensagem "O primeiro usuário já foi criado. Os demais entram por convite.", mesmo com o token correto, então não serve para criar outros administradores depois. Os detalhes, como as respostas de erro e como corrigir um e-mail digitado errado, estão em `docs/auth.md` no repositório do back-end.
+
+!!! warning "Trate o `SETUP_TOKEN` como uma senha"
+    Quem tem o token pode criar o Administrador enquanto o banco estiver vazio. Não o coloque no repositório, em chats ou em issues, e esvazie a variável assim que o Administrador for criado.
 
 !!! note "O `docker-compose.yml` é só para desenvolvimento"
     O `docker-compose.yml` do back-end usa o `Dockerfile.dev`, com hot reload e o código montado como volume. Ele não é usado em produção.
