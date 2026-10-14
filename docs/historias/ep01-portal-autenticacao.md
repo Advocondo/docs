@@ -40,8 +40,8 @@ icon: lucide/lock
 > **Como** usuário cadastrado, **eu quero** fazer login com e-mail e senha, **para que** eu acesse o painel do meu perfil.
 
 - **Perfil:** Usuário cadastrado (Administrador, Equipe Operacional ou Cliente)
-- **Depende de:** [US07](ep02-usuarios-perfis.md#us07) (usuário precisa existir)
-- **Relaciona-se com:** [US03](#us03) · [US06](#us06) · [US08](ep02-usuarios-perfis.md#us08) · [US09](ep02-usuarios-perfis.md#us09)
+- **Depende de:** — (o primeiro Administrador é criado na implantação do sistema; os demais usuários entram por convite, na [US07](ep02-usuarios-perfis.md#us07))
+- **Relaciona-se com:** [US03](#us03) · [US06](#us06) · [US07](ep02-usuarios-perfis.md#us07) · [US08](ep02-usuarios-perfis.md#us08) · [US09](ep02-usuarios-perfis.md#us09)
 
 **Critérios de aceitação**
 
