@@ -48,36 +48,25 @@ O [Coolify](https://coolify.io) roda em uma instância da Oracle Cloud e faz o b
 
 ### Primeiro deploy: criar o Administrador
 
-Os usuários entram no sistema por convite ([US07](../historias/ep02-usuarios-perfis.md#us07)), e só um Administrador logado pode convidar. Por isso, depois do primeiro deploy, o primeiro usuário é criado uma única vez pela rota `POST /setup` da API. Ele já nasce como Administrador ativo e pode fazer login ([US02](../historias/ep01-portal-autenticacao.md#us02)).
+Depois do primeiro deploy, crie o primeiro usuário, que será o Administrador. Os demais entram por convite dele ([US07](../historias/ep02-usuarios-perfis.md#us07)).
 
-A rota é protegida pela variável `SETUP_TOKEN`: ela só responde a quem envia esse valor no cabeçalho `X-Setup-Token`. Com a variável vazia, a rota fica desligada.
-
-1. Gere um token aleatório, com pelo menos 32 caracteres:
-
-    ```bash
-    openssl rand -hex 32
-    ```
-
-2. No Coolify, abra o recurso do back-end, defina a variável `SETUP_TOKEN` com esse valor e faça o redeploy. Com menos de 32 caracteres, a API não sobe.
-3. Confirme que o deploy terminou e que as migrations rodaram (`GET /health/ready` responde `200`).
-4. Crie o Administrador, com o e-mail, o nome e a senha (pelo menos 8 caracteres) de quem vai administrar o sistema:
+1. Gere um token com `openssl rand -hex 32`.
+2. No Coolify, coloque esse valor na variável `SETUP_TOKEN` do back-end e faça o redeploy.
+3. Crie o Administrador:
 
     ```bash
     curl -X POST https://<endereço-da-api>/setup \
       -H "Content-Type: application/json" \
-      -H "X-Setup-Token: <token-gerado>" \
+      -H "X-Setup-Token: <token>" \
       -d '{"email": "admin@escritorio.com.br", "name": "Nome do Administrador", "password": "<senha>"}'
     ```
 
-    A resposta `201` traz os dados do usuário criado.
+4. No Coolify, deixe `SETUP_TOKEN` vazio e faça o redeploy de novo.
 
-5. No Coolify, deixe `SETUP_TOKEN` vazio e faça o redeploy. A partir daí, a rota responde `404`.
-6. Faça login no front com esse e-mail e essa senha.
-
-A rota só funciona com o banco vazio. Se já existir algum usuário, ela recusa com a mensagem "O primeiro usuário já foi criado. Os demais entram por convite.", mesmo com o token correto, então não serve para criar outros administradores depois. Os detalhes, como as respostas de erro e como corrigir um e-mail digitado errado, estão em `docs/auth.md` no repositório do back-end.
+Pronto: é só fazer login no front com esse e-mail e essa senha.
 
 !!! warning "Trate o `SETUP_TOKEN` como uma senha"
-    Quem tem o token pode criar o Administrador enquanto o banco estiver vazio. Não o coloque no repositório, em chats ou em issues, e esvazie a variável assim que o Administrador for criado.
+    Não compartilhe o token e esvazie a variável logo depois de usar. A rota só cria o primeiro usuário: com alguém já cadastrado, ela recusa. Mais detalhes em `docs/auth.md`, no repositório do back-end.
 
 !!! note "O `docker-compose.yml` é só para desenvolvimento"
     O `docker-compose.yml` do back-end usa o `Dockerfile.dev`, com hot reload e o código montado como volume. Ele não é usado em produção.
