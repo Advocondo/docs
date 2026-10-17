@@ -36,6 +36,7 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 | DT-023 | ação manual | US12, US17 | back | Os PRs do Pedro (back#63 US23, #64 US27) também criam `condominios/__init__.py`, `parcelas/__init__.py` e arquivos `test_*_unit.py`, e mexem no `pyproject.toml`. | Quem mergear depois resolve o conflito (pequeno). Os nomes `contract_renewal_date`, `due_date` e `payment_date` já batem com as funções dele (avisado nos PRs). | aberto |
 | DT-024 | dívida | US16 | back | A comissão (US26, US32) ainda não existe. | Calcular sobre `installments.fee_amount` das parcelas pagas; o honorário já está dividido por parcela. | aberto |
 | DT-025 | fora do escopo | US17 | back | Mudar o valor da última parcela em aberto é recusado, porque não há parcela seguinte para absorver a diferença; mudar o total é a US19 (editar acordo). | Implementar a US19 recalculando o plano e a divisão de honorários das parcelas em aberto. | aberto |
+| DT-026 | ação manual | US12, US07 | back | A primeira migration do back#50 (`4ff598a0040e`) e a do back#60/#62 (`1ffb2dbe4380`) partem da mesma migration do `main` (`0557c13f7116`). Depois que um dos dois entra, o outro passa a ter dois heads no Alembic e os testes quebram ("Multiple head revisions"). | Quem mergear depois troca o `down_revision` da sua primeira migration para o head atual do `main` (`uv run alembic heads` deve mostrar um só) e roda a suíte. Avisado no back#60. | aberto |
 
 ## Resolvidos
 
@@ -60,3 +61,4 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 - 02/10/2026 — Front da US12 entregue; DT-002 e DT-013 resolvidos; DT-003 reformulado; DT-014 a DT-019 levantados.
 - 02/10/2026 — Revisão de arquitetura da US12: 4 correções aplicadas (back e front); DT-020 levantado.
 - 17/10/2026 — Back de US12, US13, US15, US17 e US16 refeito/entregue na arquitetura do grupo (back#50, #65, #66, #67, #68); convenções de branch, commit, PR e idioma atualizadas; DT-006, DT-007 e DT-009 resolvidos; DT-021 a DT-025 levantados.
+- 17/10/2026 — Revisão de merge: respostas da API passam a devolver dinheiro sempre com duas casas (back#66, #67, #68); DT-026 levantado.
