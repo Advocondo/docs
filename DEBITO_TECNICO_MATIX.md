@@ -18,7 +18,7 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 
 | ID | Tipo | Origem | Repo | Pendência | Como resolver | Status |
 |---|---|---|---|---|---|---|
-| DT-003 | ação manual | US12 | front | O front depende do branch `prepare-build-on-install` do ui-kit (PR [ui-kit#1](https://github.com/Advocondo/ui-kit/pull/1)). Sem merge, `npm ci` quebra se o branch for apagado. | Mergear o ui-kit#1 e repontar `edson-alexandre-design-system` para `github:Advocondo/ui-kit#main` (ou uma tag) no `package.json` do front. Nenhum token é necessário. | aberto |
+| DT-003 | ação manual | US12 | front | O ui-kit#1 (`prepare` que gera o `dist/` na instalação) já foi mergeado, mas o front ainda aponta para o branch `prepare-build-on-install`. | No `package.json` do front, trocar para `github:Advocondo/ui-kit#main` (ou uma tag) e rodar `npm install`. | aberto |
 | DT-004 | ação manual | US12 | back | As migrations não rodam sozinhas no deploy. | Coolify → back-end → *Pre-deployment command*: `alembic upgrade head` (ver `docs/migrations.md`). Fazer antes do primeiro deploy com a tabela `condominios`. | aberto |
 | DT-005 | fora do escopo | US12 | back/front | A listagem de condomínios não traz unidades, acordos ativos nem inadimplência acumulada (colunas do protótipo). | Acordos ativos e inadimplência: agregar após US15/US17; unidades: definir a origem do dado (campo no cadastro?) e perguntar ao PO. | aberto |
 | DT-010 | decisão | US13 | front | Não existe tela do devedor no Figma (`153-3312`, `34-7691`, `153-3303` verificados). Adotada a recomendação da doc: `/devedores` no padrão de Condomínios + seleção no Novo Acordo. | Sinalizar no PR da US13 e pedir desenho ao time de design. | aberto |
