@@ -32,11 +32,10 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 | DT-020 | dívida | US12 | front | A listagem carrega os dados no navegador (`useEffect`), pois ainda não há login. A página já é um Server Component fino, mas a busca inicial não é renderizada no servidor. | Com a US02, avaliar buscar a 1ª página no servidor (fetch com token) e passar à view client como prop. | aberto |
 | DT-011 | fora do escopo | US15 | back | O acordo ainda não tem advogado responsável: a US18 depende da marcação de advogado do convite (US07, back#60). Nenhuma coluna foi criada antes da hora. | Na US18: coluna `responsible_id` (FK para `users`), restrita a usuários advogados, com histórico de reatribuição. | aberto |
 | DT-021 | dívida | US12–US17 | front | O front (front#46) usa as rotas e campos antigos em português (`/condominios`, `nome`, `sindico_nome`...) e não envia o token de login. O back agora usa `/condominiums`, `/debtors`, `/agreements`, `/installments`, campos em inglês e exige `Authorization`. | Ao retomar o front: atualizar `app/lib/api.ts` e os tipos, enviar o token do login e cobrir devedor, acordo e parcelas. | aberto |
-| DT-022 | ação manual | US12–US16 | back | Os PRs são empilhados: back#50 → #65 → #66 → #67 → #68. Cada um tem como base o branch do anterior. | Mergear nessa ordem; depois de cada merge, trocar a base do PR seguinte para `main` (o GitHub faz sozinho se o branch mergeado for apagado). | aberto |
+| DT-022 | ação manual | US15–US17 | back | O #65 (US13) foi mergeado na branch do back#50, e o #67 (US17) e o #68 (US16) na branch `15-cadastrar-acordo`. O back#66 (US15) fechou sem merge quando a branch base dele foi apagada, então US15, US16 e US17 estão sem PR para o `main`. A branch `15-cadastrar-acordo` já está atualizada com o back#50. | Combinar com o Ciro e abrir um PR de `15-cadastrar-acordo` (base `US-12-cadastrar-condominio` até o #50 entrar, depois `main`) com `Closes #14`, `#16` e `#15`. | aberto |
 | DT-023 | ação manual | US12, US17 | back | Os PRs do Pedro (back#63 US23, #64 US27) também criam `condominios/__init__.py`, `parcelas/__init__.py` e arquivos `test_*_unit.py`, e mexem no `pyproject.toml`. | Quem mergear depois resolve o conflito (pequeno). Os nomes `contract_renewal_date`, `due_date` e `payment_date` já batem com as funções dele (avisado nos PRs). | aberto |
 | DT-024 | dívida | US16 | back | A comissão (US26, US32) ainda não existe. | Calcular sobre `installments.fee_amount` das parcelas pagas; o honorário já está dividido por parcela. | aberto |
 | DT-025 | fora do escopo | US17 | back | Mudar o valor da última parcela em aberto é recusado, porque não há parcela seguinte para absorver a diferença; mudar o total é a US19 (editar acordo). | Implementar a US19 recalculando o plano e a divisão de honorários das parcelas em aberto. | aberto |
-| DT-026 | ação manual | US12, US07 | back | A primeira migration do back#50 (`4ff598a0040e`) e a do back#60/#62 (`1ffb2dbe4380`) partem da mesma migration do `main` (`0557c13f7116`). Depois que um dos dois entra, o outro passa a ter dois heads no Alembic e os testes quebram ("Multiple head revisions"). | Quem mergear depois troca o `down_revision` da sua primeira migration para o head atual do `main` (`uv run alembic heads` deve mostrar um só) e roda a suíte. Avisado no back#60. | aberto |
 
 ## Resolvidos
 
@@ -53,6 +52,7 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 | DT-006 | 17/10/2026 | `agreements.condominium_id` é `NOT NULL` com FK (back#66); acordo sem condomínio cadastrado é recusado com 404. |
 | DT-007 | 17/10/2026 | O login da Gabriela entrou no `main`; as rotas internas usam `require_office_staff` (Administrador ou Equipe Operacional), com testes 401/403 (back#50). |
 | DT-009 | 17/10/2026 | O código antigo da US12 foi refeito na arquitetura do grupo; cobertura total da suíte em 98%. |
+| DT-026 | 19/10/2026 | O #60/#62 entraram no `main` primeiro; o back#50 trouxe o `main` e a migration de condomínios passou a vir depois de `1ffb2dbe4380` (um único head). |
 
 ## Histórico
 
@@ -62,3 +62,4 @@ Registro persistente do que ficou pendente nas tarefas feitas por Mateus (com ag
 - 02/10/2026 — Revisão de arquitetura da US12: 4 correções aplicadas (back e front); DT-020 levantado.
 - 17/10/2026 — Back de US12, US13, US15, US17 e US16 refeito/entregue na arquitetura do grupo (back#50, #65, #66, #67, #68); convenções de branch, commit, PR e idioma atualizadas; DT-006, DT-007 e DT-009 resolvidos; DT-021 a DT-025 levantados.
 - 17/10/2026 — Revisão de merge: respostas da API passam a devolver dinheiro sempre com duas casas (back#66, #67, #68); DT-026 levantado.
+- 19/10/2026 — Review do Ciro no back#50: CNPJ alfanumérico (IN RFB 2.229/2024) aceito; `main` trazido para o #50 e DT-026 resolvido; DT-022 reescrito (back#66 fechado sem merge).
