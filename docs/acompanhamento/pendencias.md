@@ -46,6 +46,7 @@ Também estão abertas as issues de infraestrutura do front: deploy contínuo e 
 | Decisão | Com quem | Afeta |
 | --- | --- | --- |
 | Regra de comissão de cada membro da equipe | PO e escritório | R2, US32–US34 |
+| Provedor de e-mail (SMTP) de produção: sem ele, convites e redefinição de senha não funcionam em produção (ver [Deploy](../infraestrutura/deploy.md#variaveis-de-ambiente-do-back-end)) | Time e escritório | US03, US07, US40 |
 | Responsável pela [US38](../historias/ep06-painel-cliente.md#us38) | Time | US38 |
 | Escopo da reativação de acordo cancelado ([back#88](https://github.com/Advocondo/back/issues/88)), que não está em nenhuma história | PO | US20 |
 | Quais eventos disparam o e-mail automático ao Cliente (US40-CA01 cita exemplos, não uma lista) | PO | US40 |
