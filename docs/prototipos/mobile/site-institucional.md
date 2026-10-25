@@ -52,3 +52,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 
 - As fotos da equipe continuam ausentes; os retratos usam o placeholder do `TeamCard`.
 - Os textos das avaliações seguem parafraseados. Substitua pelos reviews reais antes de uso público.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

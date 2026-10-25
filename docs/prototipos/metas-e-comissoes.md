@@ -40,3 +40,12 @@ Tela nova, montada com a mesma composição do [Acompanhamento Mensal](acompanha
 - A tela mistura a visão do operador (minhas comissões) com a do administrador (metas da equipe). Os protótipos de requisito tratam como duas telas com perfis diferentes; decida se aqui há uma tela com duas abas ou duas telas.
 - As proporções variam entre linhas: honorários de 10%, 20% e 10% sobre o valor pago, comissão de 30% sobre os honorários. O protótipo HTML usa 8% de comissão. Fixe a regra antes de espalhar números.
 - O calendário e seus marcadores vieram do Acompanhamento Mensal e não têm função clara aqui. Um gráfico de atingimento da meta no mês diz mais.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

@@ -29,3 +29,12 @@ A captura abaixo foi exportada do próprio Figma.
 - As fotos da equipe não acompanham o repositório; no Figma os retratos aparecem como placeholder navy.
 - As marcas sociais (WhatsApp, Facebook, Instagram) são substituições Lucide. Para produção, use as marcas oficiais.
 - A fileira da equipe é um carrossel no site real; aqui é uma fileira estática.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

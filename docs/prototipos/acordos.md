@@ -68,3 +68,12 @@ Aberto por "Importar Planilha".
 - Falta o estado de sucesso da importação (quantas linhas entraram, quantas falharam) e o estado vazio da listagem, que o `DataTable` já prevê com `EmptyState`.
 - O valor de honorários da segunda linha (R$ 270,00 sobre R$ 1.200,00) não segue a mesma proporção da primeira (10%). Se os honorários forem percentuais, calcule no diálogo em vez de digitar.
 - O diálogo Novo Acordo não tem o campo de responsável. A [US18](../historias/ep03-cadastro-acordos.md#us18) pede que a seleção mostre só usuários marcados como advogado, com histórico de reatribuição.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

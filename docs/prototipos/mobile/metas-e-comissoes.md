@@ -60,3 +60,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 
 - A comissão de 8% sobre os honorários recebidos e as metas em reais são regras ilustrativas; confirme com o escritório.
 - Só usuários marcados como advogado têm meta, porque a comissão vem do acordo sob responsabilidade.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

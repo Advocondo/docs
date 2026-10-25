@@ -93,3 +93,12 @@ O logo é raster, extraído de JPEG. Não redesenhar, não vetorizar à mão, ma
 - Repositório: [`assets/`](https://github.com/Advocondo/ui-kit/tree/main/assets), [`components/brand/Logo.jsx`](https://github.com/Advocondo/ui-kit/blob/main/components/brand/Logo.jsx) e [`guidelines/brand-mark.html`](https://github.com/Advocondo/ui-kit/blob/main/guidelines/brand-mark.html)
 
 ![Bloco Marca](../assets/design-system/fund-marca.png)
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Páginas do design system a partir do Figma. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

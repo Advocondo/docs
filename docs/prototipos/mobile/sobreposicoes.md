@@ -49,3 +49,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 ## Pontos de atenção
 
 - O `Dialog` centraliza na viewport com 24px de margem; um padrão de folha inferior (bottom sheet) seria mais natural no celular e é uma proposta para o design system.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

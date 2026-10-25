@@ -48,3 +48,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 ## Pontos de atenção
 
 - As duas etiquetas "Ver como operacional / administrador" são um recurso de demonstração do protótipo; não entram no produto.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

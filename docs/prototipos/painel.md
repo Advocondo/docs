@@ -48,3 +48,12 @@ A captura abaixo é o Painel da EA Processos como exportado do repositório, ant
 - "Prazos mais próximos" e "Movimentações de hoje" ainda falam de processos judiciais. No sistema de acordos, o equivalente natural é "Parcelas a vencer" e "Baixas de hoje", alimentados pelo [Acompanhamento Mensal](acompanhamento-mensal.md).
 - A barra lateral conta 248 acordos, mas o indicador diz 142 acordos ativos. Os dados são fictícios, mas o protótipo fica mais convincente com um único número.
 - "Honorários / Receita estimada" mistura dois conceitos no mesmo card. Escolha um, ou use o `footnote` do `MetricCard` para o segundo.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

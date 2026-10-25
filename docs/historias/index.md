@@ -120,3 +120,13 @@ As 40 histórias em ordem de identificador. A coluna **CA** indica quantos crit�
 Total: **40 histórias** e **87 critérios de aceitação** em 6 épicos.
 
 Para as dependências entre histórias, veja a [matriz de rastreabilidade](../rastreabilidade/matriz.md).
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 13/09/2026 | Criação da seção de histórias e das convenções de identificação. | Gabriela Tiago de Araújo |
+| 1.1 | 13/09/2026 | Matriz de rastreabilidade e índice completo das histórias. | Gabriela Tiago de Araújo |
+| 1.2 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

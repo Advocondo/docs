@@ -115,3 +115,12 @@ As três histórias do MVP sem tela são [US08](../historias/ep02-usuarios-perfi
 3. Demonstrar a inativação e a reativação de usuário em Gestão de Usuários (US08).
 4. Desenhar a definição de metas por colaborador e separar a visão do operador da visão do administrador em Metas e Comissões (US32, US36).
 5. Mostrar o plano de parcelas no Detalhes do Acordo, com a divisão entre condomínio e honorários por parcela (US16, US17).
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

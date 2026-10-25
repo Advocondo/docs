@@ -70,3 +70,15 @@ Pronto: é só fazer login no front com esse e-mail e essa senha.
 
 !!! note "O `docker-compose.yml` é só para desenvolvimento"
     O `docker-compose.yml` do back-end usa o `Dockerfile.dev`, com hot reload e o código montado como volume. Ele não é usado em produção.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 30/09/2026 | Documentação do deploy (Vercel e Oracle Cloud/Coolify). | Ciro Costa |
+| 1.1 | 10/10/2026 | Migrations e criação do primeiro Administrador no deploy. | Gabriela Tiago de Araújo |
+| 1.2 | 14/10/2026 | Primeiro Administrador criado pela rota POST /setup. | Gabriela Tiago de Araújo |
+| 1.3 | 14/10/2026 | Simplificação dos passos do primeiro Administrador. | Gabriela Tiago de Araújo |
+| 1.4 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

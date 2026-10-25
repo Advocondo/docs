@@ -195,3 +195,12 @@ Os componentes exclusivos do site institucional. Todos assumem fundo navy por pa
 - Repositório: [`components/brand/`](https://github.com/Advocondo/ui-kit/tree/main/components/brand), vitrine em [`components/brand/brand.card.html`](https://github.com/Advocondo/ui-kit/blob/main/components/brand/brand.card.html)
 
 ![Bloco SectionTitle, PracticeCard e TeamCard](../assets/design-system/comp-sectiontitle-practicecard-teamcard.png)
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Páginas do design system a partir do Figma. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

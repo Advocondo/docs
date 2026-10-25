@@ -54,3 +54,12 @@ Ações: Cancelar e "Salvar prazo".
 - Os dois frames divergem: o da listagem tem a coluna "Acordos Ativos" e quatro linhas; o do diálogo ainda mostra "Processos" e inclui a linha "Res. Villa Verde". Unifique a listagem de fundo antes de apresentar.
 - Um diálogo com doze campos é longo para o `Dialog` do sistema. Considere uma página própria de cadastro, ou agrupe os campos nas quatro seções acima com `SectionTitle size="sm"`.
 - Em "Ed. DF Century Plaza" a localidade está vazia e "Conselho Gestor" ocupa a coluna de síndico. Se um condomínio pode ser gerido por conselho, esse é um valor válido do campo; senão, é um dado de exemplo a corrigir.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

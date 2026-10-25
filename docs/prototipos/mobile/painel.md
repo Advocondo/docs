@@ -59,3 +59,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 ## Pontos de atenção
 
 - A operacional vê os totais recuperados do mês inteiro, não só os seus. Se o escritório considerar esse número sensível, restrinja aos acordos da pessoa.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

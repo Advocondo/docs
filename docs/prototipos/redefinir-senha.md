@@ -32,3 +32,12 @@ Tela derivada do [Login](login.md), com a mesma composição em duas metades. O 
 - Falta o passo anterior do fluxo: a tela que pede o e-mail e envia o link de redefinição. Sem ela, "Esqueci minha senha" no Login não tem destino.
 - Defina os critérios de senha (tamanho mínimo, caracteres) e mostre-os como `hint` do `FieldLabel`, além do estado de erro quando as duas senhas não coincidem.
 - Preveja o estado de link expirado e a confirmação de sucesso (um `Alert tone="ok"` ou redirecionamento ao Login com `Toast`).
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

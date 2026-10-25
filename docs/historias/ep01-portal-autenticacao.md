@@ -112,3 +112,13 @@ icon: lucide/lock
 ---
 
 **Navegação:** [Índice das histórias](index.md) · [Épico 2 — Gestão de Usuários →](ep02-usuarios-perfis.md) · [Matriz de rastreabilidade](../rastreabilidade/matriz.md)
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 13/09/2026 | Histórias do EP01 e do EP02 (US01–US11). | Gabriela Tiago de Araújo |
+| 1.1 | 10/10/2026 | A US07 passa a depender da US02, e não o contrário. | Gabriela Tiago de Araújo |
+| 1.2 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

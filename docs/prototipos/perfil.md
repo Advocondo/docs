@@ -30,3 +30,12 @@ Tela do próprio usuário para atualizar nome, e-mail e senha.
 - A ordem dos campos de senha está invertida: peça primeiro "Senha atual", depois "Nova senha" e "Confirmar nova senha". Separe a troca de senha dos dados cadastrais, com o próprio botão, para que salvar o nome não exija a senha.
 - Não há caminho visível para esta tela na barra lateral. O rodapé do `SidebarNav` mostra o usuário; confirme que o clique ali leva ao Perfil.
 - O perfil de acesso (Administrador ou Equipe Operacional) é definido em [Gestão de Usuários](gestao-de-usuarios.md) e pode aparecer aqui só como leitura.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

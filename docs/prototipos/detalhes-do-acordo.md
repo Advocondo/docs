@@ -42,3 +42,12 @@ Página de um acordo: valores, progresso das parcelas, anexos e histórico. Herd
 - "Cancelar" ao lado de "Editar" é uma ação destrutiva sobre o acordo. Use `Button variant="danger"` e confirme em um `Dialog`, com o motivo do cancelamento registrado na trilha de auditoria.
 - A tela de origem tinha abas (movimentações, documentos, partes, financeiro). Aqui falta a tabela das dez parcelas com vencimento, valor, situação e ação de baixa; hoje isso só existe no [Acompanhamento Mensal](acompanhamento-mensal.md).
 - Falta a ação de gerar o PDF do acordo, com download e link de acesso que respeite as permissões do acordo ([US24](../historias/ep03-cadastro-acordos.md#us24)).
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

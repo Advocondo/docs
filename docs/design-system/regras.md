@@ -61,3 +61,12 @@ Cada item abaixo é uma substituição declarada ou uma proposta. Resolva-os com
 - **A plataforma é uma proposta.** A EA Processos ainda não existe. Números CNJ, condomínios, síndicos e valores são inventados; nomes da equipe e contatos são os reais publicados pelo escritório.
 
 ![Bloco O que ainda não é definitivo](../assets/design-system/regras-o-que-ainda-nao-e-definitivo.png)
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Páginas do design system a partir do Figma. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |
