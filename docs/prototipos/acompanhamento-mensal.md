@@ -55,3 +55,12 @@ Ações: Cancelar e Confirmar Pagamento.
 - "Em Aberto" usa caixa alta no segundo termo; os rótulos de `StatusPill` são em caixa de frase ("Em aberto").
 - O valor de exemplo do diálogo (R$ 5.500,00) não corresponde a nenhuma parcela da tabela. Pré-preencha o valor com a parcela selecionada e permita ajuste.
 - A tela "Faturas do mês" dos protótipos de requisito já traz abas por situação (Todas, Em aberto, Atrasadas, Pagas), filtros por condomínio e responsável e um alerta de parcelas vencidas sem baixa. Vale espelhar esse recorte aqui para as duas frentes convergirem.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

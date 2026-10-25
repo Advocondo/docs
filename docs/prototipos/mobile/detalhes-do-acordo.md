@@ -87,3 +87,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 
 - O upload de documento é só um botão; o fluxo de anexar (câmera, arquivos) fica para a implementação (US21).
 - O acordo exibido por padrão é o ACD-2026-0118; `?id=ACD-2026-0124` mostra um acordo em atraso.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

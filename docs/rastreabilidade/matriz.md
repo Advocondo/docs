@@ -234,3 +234,13 @@ Ao criar, remover ou repriorizar uma história:
 3. Reflita a mudança nesta matriz e no [índice completo](../historias/index.md#indice).
 
 As convenções de identificação estão em [Histórias de usuário → convenções](../historias/index.md#convencoes).
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 13/09/2026 | Matriz de rastreabilidade e índice completo das histórias. | Gabriela Tiago de Araújo |
+| 1.1 | 10/10/2026 | A US07 passa a depender da US02, e não o contrário. | Gabriela Tiago de Araújo |
+| 1.2 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

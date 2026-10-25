@@ -30,3 +30,12 @@ Tela de acesso à plataforma, dividida em duas metades: navy à esquerda com o l
 
 - Os protótipos de requisito preveem erro genérico de autenticação. A tela no Figma não mostra o estado de erro; o padrão é `Input invalid` com `error` abaixo do campo, sem revelar se o e-mail existe.
 - "Síndicos autorizados" no texto de contexto sugere um perfil de cliente que não aparece em [Gestão de Usuários](gestao-de-usuarios.md). Confirme se esse perfil entra no escopo.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

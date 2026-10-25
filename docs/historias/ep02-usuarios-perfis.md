@@ -97,3 +97,13 @@ icon: lucide/users
 ---
 
 **Navegação:** [← Épico 1 — Portal & Autenticação](ep01-portal-autenticacao.md) · [Índice das histórias](index.md) · [Épico 3 — Cadastro de Acordos →](ep03-cadastro-acordos.md) · [Matriz de rastreabilidade](../rastreabilidade/matriz.md)
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 13/09/2026 | Histórias do EP01 e do EP02 (US01–US11). | Gabriela Tiago de Araújo |
+| 1.1 | 10/10/2026 | A US07 passa a depender da US02, e não o contrário. | Gabriela Tiago de Araújo |
+| 1.2 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

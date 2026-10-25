@@ -56,3 +56,14 @@ A [cobertura das histórias de usuário](cobertura-historias.md) cruza as 40 [hi
 A versão **mobile** dessas telas, em 390px e com as lacunas do Figma já resolvidas, está em [Protótipos mobile](mobile/index.md).
 
 O repositório mantém, em paralelo, protótipos estáticos de requisito em `prototipos/` (uma tela por HTML, compostos só com componentes do design system e ligados às histórias de usuário). Eles validam requisitos; o Figma explora a solução visual. Quando as duas frentes divergirem, registre a decisão aqui e no cabeçalho de premissas da tela HTML.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 14/09/2026 | Remoção de informações desnecessárias do índice dos protótipos. | Pedro Henrique Braga |
+| 1.2 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.3 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

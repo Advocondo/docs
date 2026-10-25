@@ -51,3 +51,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 ## Pontos de atenção
 
 - O card "Regras de auditoria vigentes" da EA Processos não voltou; se o escritório quiser regras explícitas (estorno exige justificativa, cancelamento exige sócio), esta é a tela para elas.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

@@ -74,3 +74,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 ## Pontos de atenção
 
 - Os critérios de senha (10 caracteres, letras e números) são uma proposta; alinhe com a política do escritório.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

@@ -49,3 +49,12 @@ O repositório continua sendo a fonte de verdade dos **fundamentos** e dos **com
 | [`guidelines/`](https://github.com/Advocondo/ui-kit/tree/main/guidelines) | Specimens dos fundamentos, um HTML por cartão. |
 | [`ui_kits/`](https://github.com/Advocondo/ui-kit/tree/main/ui_kits) | Site institucional e EA Processos, montados só com os componentes do sistema. |
 | [`LIBRARY.md`](https://github.com/Advocondo/ui-kit/blob/main/LIBRARY.md) | Como consumir a biblioteca compilada em um projeto TypeScript/React. |
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Páginas do design system a partir do Figma. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

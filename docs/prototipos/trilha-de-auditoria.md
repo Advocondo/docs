@@ -42,3 +42,12 @@ Registro imutável das ações no sistema. Herdou o nó da tela de Trilha de aud
 - Uma baixa manual registrada com autor "Sistema" contradiz a ideia de trilha: a baixa é feita por uma pessoa. Reserve "Sistema" para ações automáticas.
 - Na linha de inativação, o autor é `estagiario@` e o usuário inativado é `estagio@`. Se são a mesma pessoa, é um erro de exemplo; se não, o autor deveria ser um administrador.
 - O card "Regras de auditoria vigentes" da tela de origem (imutabilidade, dupla confirmação de prazo fatal) sumiu. Vale voltar com regras do domínio de acordos, por exemplo: baixa desfeita exige justificativa; cancelamento de acordo exige um sócio.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

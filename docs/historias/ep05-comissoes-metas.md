@@ -97,3 +97,12 @@ icon: lucide/trending-up
 ---
 
 **Navegação:** [← Épico 4 — Acompanhamento de Parcelas](ep04-parcelas.md) · [Índice das histórias](index.md) · [Épico 6 — Painel do Cliente →](ep06-painel-cliente.md) · [Matriz de rastreabilidade](../rastreabilidade/matriz.md)
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 13/09/2026 | Histórias do EP04, do EP05 e do EP06 (US25–US40). | Gabriela Tiago de Araújo |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

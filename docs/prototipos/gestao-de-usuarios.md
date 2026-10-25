@@ -48,3 +48,12 @@ Frame [124:2537](https://www.figma.com/design/jEwHxavSrPVQrm3hGSLGtC/edson-alexa
 - O texto de contexto do Login menciona "síndicos autorizados", mas não há perfil de síndico aqui. Confirme se o acesso de clientes está no escopo.
 - Os e-mails `example.com` são placeholders adequados; mantenha assim até ter dados reais.
 - O convite não permite marcar o usuário como advogado nem informar o número da OAB ([US07](../historias/ep02-usuarios-perfis.md#us07)). Essa marcação é independente do perfil e define quem pode ser responsável por um acordo ([US18](../historias/ep03-cadastro-acordos.md#us18)).
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

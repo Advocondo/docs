@@ -128,3 +128,11 @@ Situação de cada história nas telas mobile, com o mesmo critério da [cobertu
 | [US39](../../historias/ep06-painel-cliente.md#us39) | — | Não demonstrada |  |
 | [US40](../../historias/ep06-painel-cliente.md#us40) | — | Não demonstrada |  |
 
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

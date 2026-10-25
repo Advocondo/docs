@@ -231,3 +231,12 @@ icon: lucide/file-text
 ---
 
 **Navegação:** [← Épico 2 — Gestão de Usuários](ep02-usuarios-perfis.md) · [Índice das histórias](index.md) · [Épico 4 — Acompanhamento de Parcelas →](ep04-parcelas.md) · [Matriz de rastreabilidade](../rastreabilidade/matriz.md)
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 13/09/2026 | Histórias do EP03 (US12–US24). | Gabriela Tiago de Araújo |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

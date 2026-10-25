@@ -78,3 +78,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 
 - Números de OAB e e-mails são fictícios.
 - Ao inativar alguém com acordos sob responsabilidade, o diálogo lembra de reatribuir; a reatribuição em lote não foi desenhada.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

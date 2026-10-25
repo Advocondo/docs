@@ -31,3 +31,12 @@ A captura abaixo vem da folha HTML. No Figma, a única diferença é o rótulo "
 - Esta é a referência de comportamento dos diálogos do sistema de acordos (Novo Acordo, Importar Inadimplentes, Registrar Baixa, Novo condomínio, Convidar Membro): véu navy a 62%, título, descrição, campos e rodapé com Cancelar à esquerda da ação primária.
 - O rótulo "Salvar prazo" deste diálogo foi copiado por engano para os diálogos de Condomínios e de Gestão de Usuários. Cada diálogo precisa do próprio verbo.
 - A barra lateral aqui ficou no meio do caminho: mostra "Acordos", mas não "Metas e Comissões" nem "Gestão de Usuários". Se a tela continuar no arquivo, alinhe a barra lateral com as demais.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas do protótipo e cobertura das histórias. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |

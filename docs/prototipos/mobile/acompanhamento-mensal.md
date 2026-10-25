@@ -79,3 +79,12 @@ Capturas em 390px de largura, renderizadas do HTML. As telas longas aparecem int
 
 - O status "Atrasada" é calculado pelo sistema; a tela só o exibe (US27).
 - Estornar uma baixa fica restrito ao administrador e não aparece aqui; está na Trilha de auditoria.
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 14/09/2026 | Telas mobile do protótipo, com capturas. | Pedro Henrique Braga |
+| 1.1 | 25/10/2026 | Inclusão do histórico de versão. | Mateus Vieira |
