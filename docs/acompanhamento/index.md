@@ -66,7 +66,7 @@ Antes das histórias, a infraestrutura foi entregue em 30/09: CI, deploy, banco,
 
 | Frente | Situação |
 | --- | --- |
-| **Back-end** ([`Advocondo/back`](https://github.com/Advocondo/back)) | FastAPI + PostgreSQL 18. Módulos por domínio: `auth`, `users`, `metas`, `condominios`, `devedores`, `acordos`, `documentos`, `parcelas`, `painel_admin`, `painel_operacional`, `painel_cliente`, `landing` e `common`. Cada um tem a sua página em `docs/` no repositório do back. |
+| **Back-end** ([`Advocondo/back`](https://github.com/Advocondo/back)) | FastAPI + PostgreSQL 18, organizado em camadas (ver [Arquitetura](../arquitetura/index.md) e [Banco de dados](../pc2/banco-de-dados.md)). Módulos por domínio: `auth`, `users`, `metas`, `condominios`, `devedores`, `acordos`, `documentos`, `parcelas`, `painel_admin`, `painel_operacional`, `painel_cliente`, `landing` e `common`. Cada um tem a sua página em `docs/` no repositório do back. |
 | **Qualidade do back** | A cada push e PR, o CI roda gitleaks, ruff (lint e formato), mypy estrito, pytest com cobertura e o build da imagem de produção. A `main` é protegida por esses checks. |
 | **Deploy** | Back na Oracle Cloud via Coolify, com as migrations no *pre-deployment command*. O front vai para a Vercel. Ver [Deploy](../infraestrutura/deploy.md). |
 | **Front-end** ([`Advocondo/front`](https://github.com/Advocondo/front)) | Next.js com CI de lint, tipos, testes e build. O design system vem do pacote [`Advocondo/ui-kit`](https://github.com/Advocondo/ui-kit). A primeira tela (Condomínios, US12) está no [PR #46](https://github.com/Advocondo/front/pull/46). |
@@ -86,3 +86,4 @@ Antes das histórias, a infraestrutura foi entregue em 30/09: CI, deploy, banco,
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 25/10/2026 | Criação da página com o retrato da entrega em 25/10/2026. | Mateus Vieira |
+| 1.1 | 25/10/2026 | Links para as páginas de Arquitetura e Banco de dados. | Mateus Vieira |

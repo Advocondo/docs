@@ -42,6 +42,7 @@ O sistema cobre esse ciclo de ponta a ponta: cadastro do acordo, acompanhamento 
 | **[Histórias de usuário](historias/index.md)** | As 40 histórias acordadas com o cliente, organizadas em 6 épicos, com critérios de aceitação identificados individualmente. |
 | **[Matriz de rastreabilidade](rastreabilidade/matriz.md)** | Quem depende de quem, cobertura por perfil e mapa de dependências entre histórias. |
 | **[Requisito → código → teste](rastreabilidade/implementacao.md)** | Cada critério de aceitação ligado ao módulo, às rotas da API e aos testes que o verificam. |
+| **[PC2 · Critérios técnicos](pc2/index.md)** | Evidências de arquitetura, clean code, testes, banco de dados, modelo físico, API externa e lint, com links para o código. |
 | **[Acompanhamento da entrega](acompanhamento/index.md)** | O que já foi construído, a situação de cada história no back e no front, e as pendências e riscos. |
 | **[Infraestrutura](infraestrutura/deploy.md)** | Como o back e o front são publicados e como criar o primeiro Administrador. |
 | **[Design system](design-system/index.md)** | Fundamentos visuais, componentes e regras da identidade do escritório. |
@@ -88,3 +89,4 @@ graph LR
 | 1.0 | 21/08/2026 | Criação do site com o Zensical. | Ciro Costa |
 | 1.1 | 13/09/2026 | Visão geral do produto e perfis de acesso. | Gabriela Tiago de Araújo |
 | 1.2 | 25/10/2026 | Resumo da situação da entrega e mapa completo da documentação; inclusão do histórico de versão. | Mateus Vieira |
+| 1.3 | 25/10/2026 | Seção PC2 no mapa da documentação. | Mateus Vieira |

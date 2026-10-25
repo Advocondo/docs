@@ -40,6 +40,7 @@ Também estão abertas as issues de infraestrutura do front: deploy contínuo e 
 | R4 | **US08 sem testes próprios.** Não há teste que cite os critérios da inativação. O bloqueio de login do usuário inativo é testado em `auth`, mas as guardas de `change_status` (usuário inexistente, pendente ou o próprio Administrador) não são exercitadas. | `users/service.py` (`change_status`) | Uma regressão na inativação e na reativação ([US08](../historias/ep02-usuarios-perfis.md#us08)), que é do MVP, passaria pelo CI. | Uma classe `TestChangeUserStatus` em `users/test_users_integration.py`, marcando US08-CA01 a CA03. |
 | R5 | **Documentação do back incompleta em `users`.** `docs/users.md` só descreve `PATCH /users/me` e os condomínios do Cliente. Faltam convites, status, perfil, histórico, advogados e meta. | `back/docs/users.md` | O front e quem mantém o código precisam ler o código para saber o contrato dessas rotas. | Completar a página no padrão de `docs/devedores.md`. |
 | R6 | **Backup do banco não definido.** | [back#44](https://github.com/Advocondo/back/issues/44) | Uma falha no servidor do Coolify perde os dados de produção. | Backup diário do Postgres com retenção e um teste de restauração documentado em [Deploy](../infraestrutura/deploy.md). |
+| R7 | **Duas checagens mortas no router de condomínios.** `GET` e `PATCH /condominiums/{id}` ainda têm `if ... raise HTTPException`, embora o service já lance `CondominiumNotFoundError`. O código nunca roda e fere a regra de que o router não trata regra de negócio. | `condominios/router.py` | Pequeno: só confunde quem toma o módulo de referência como exemplo. | Remover os dois `if`, como apontado no acompanhamento do [PR #77](https://github.com/Advocondo/back/pull/77). |
 
 ## Decisões pendentes { #decisoes }
 
@@ -66,3 +67,4 @@ Também estão abertas as issues de infraestrutura do front: deploy contínuo e 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 25/10/2026 | Criação da página com as histórias pendentes, os riscos encontrados na conferência do back-end e as decisões em aberto. | Mateus Vieira |
+| 1.1 | 25/10/2026 | Risco R7 (checagens mortas no router de condomínios) e decisão sobre o provedor de e-mail. | Mateus Vieira |

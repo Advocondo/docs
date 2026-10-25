@@ -29,6 +29,16 @@ nav = [
     { "Completude do backlog" = "acompanhamento/backlog.md" },
     { "Pendências e riscos" = "acompanhamento/pendencias.md" },
   ]},
+  { "PC2 · Critérios técnicos" = [
+    { "Visão geral" = "pc2/index.md" },
+    { "Arquitetura" = "arquitetura/index.md" },
+    { "Clean Code" = "pc2/clean-code.md" },
+    { "Testes parametrizados e de integração" = "pc2/testes.md" },
+    { "Banco de dados" = "pc2/banco-de-dados.md" },
+    { "Modelo físico do banco" = "pc2/modelo-fisico.md" },
+    { "API externa" = "pc2/api-externa.md" },
+    { "Lint e análise estática" = "pc2/lint.md" },
+  ]},
   { "Rastreabilidade" = [
     { "Matriz de rastreabilidade" = "rastreabilidade/matriz.md" },
     { "Requisito → código → teste" = "rastreabilidade/implementacao.md" },
