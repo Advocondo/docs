@@ -24,8 +24,14 @@ nav = [
     { "EP05 · Comissões e Metas" = "historias/ep05-comissoes-metas.md" },
     { "EP06 · Painel do Cliente" = "historias/ep06-painel-cliente.md" },
   ]},
+  { "Acompanhamento da entrega" = [
+    { "Situação da entrega" = "acompanhamento/index.md" },
+    { "Completude do backlog" = "acompanhamento/backlog.md" },
+    { "Pendências e riscos" = "acompanhamento/pendencias.md" },
+  ]},
   { "Rastreabilidade" = [
     { "Matriz de rastreabilidade" = "rastreabilidade/matriz.md" },
+    { "Requisito → código → teste" = "rastreabilidade/implementacao.md" },
   ]},
   { "Infraestrutura" = [
     { "Deploy" = "infraestrutura/deploy.md" },
@@ -69,6 +75,9 @@ nav = [
       { "Meu perfil" = "prototipos/mobile/perfil.md" },
       { "Sobreposições" = "prototipos/mobile/sobreposicoes.md" },
     ]},
+  ]},
+  { "Validação" = [
+    { "Validação do protótipo" = "validações/validacao_prototipo.md" },
   ]},
 ]
 

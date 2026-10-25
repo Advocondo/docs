@@ -8,6 +8,9 @@ Documentação de requisitos do **sistema de gestão de acordos extrajudiciais**
 
 Esta documentação é a fonte única dos requisitos acordados com o cliente. Ela é versionada junto com o código, no repositório [Advocondo/docs](https://github.com/Advocondo/docs), e publicada automaticamente a cada alteração na branch `main`.
 
+!!! success "Situação da entrega em 25/10/2026"
+    O back-end tem **32 das 39 histórias** com parte no back e **14 das 15 do MVP** na `main`, com 814 testes automatizados e 95% de cobertura. O front-end está começando pelas telas do MVP. Veja a [Situação da entrega](acompanhamento/index.md).
+
 ---
 
 ## O problema
@@ -38,6 +41,12 @@ O sistema cobre esse ciclo de ponta a ponta: cadastro do acordo, acompanhamento 
 | --- | --- |
 | **[Histórias de usuário](historias/index.md)** | As 40 histórias acordadas com o cliente, organizadas em 6 épicos, com critérios de aceitação identificados individualmente. |
 | **[Matriz de rastreabilidade](rastreabilidade/matriz.md)** | Quem depende de quem, cobertura por perfil e mapa de dependências entre histórias. |
+| **[Requisito → código → teste](rastreabilidade/implementacao.md)** | Cada critério de aceitação ligado ao módulo, às rotas da API e aos testes que o verificam. |
+| **[Acompanhamento da entrega](acompanhamento/index.md)** | O que já foi construído, a situação de cada história no back e no front, e as pendências e riscos. |
+| **[Infraestrutura](infraestrutura/deploy.md)** | Como o back e o front são publicados e como criar o primeiro Administrador. |
+| **[Design system](design-system/index.md)** | Fundamentos visuais, componentes e regras da identidade do escritório. |
+| **[Protótipos](prototipos/index.md)** | As telas do Figma, desktop e mobile, e a cobertura das histórias por tela. |
+| **[Validação](validações/validacao_prototipo.md)** | O registro da validação do protótipo com o cliente. |
 
 ---
 
@@ -69,3 +78,13 @@ graph LR
 - Cada alteração é feita via commit no repositório `docs` e publicada automaticamente pelo GitHub Actions.
 - Identificadores de história (`US01`) e de critério (`US01-CA01`) são **estáveis**: não são renumerados quando algo é inserido ou removido.
 - As convenções completas de escrita e identificação estão em [Histórias de usuário → convenções](historias/index.md#convencoes).
+
+---
+
+## Histórico de versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 21/08/2026 | Criação do site com o Zensical. | Ciro Costa |
+| 1.1 | 13/09/2026 | Visão geral do produto e perfis de acesso. | Gabriela Tiago de Araújo |
+| 1.2 | 25/10/2026 | Resumo da situação da entrega e mapa completo da documentação; inclusão do histórico de versão. | Mateus Vieira |
