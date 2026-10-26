@@ -8,8 +8,8 @@ Documentação de requisitos do **sistema de gestão de acordos extrajudiciais**
 
 Esta documentação é a fonte única dos requisitos acordados com o cliente. Ela é versionada junto com o código, no repositório [Advocondo/docs](https://github.com/Advocondo/docs), e publicada automaticamente a cada alteração na branch `main`.
 
-!!! success "Situação da entrega em 25/10/2026"
-    O back-end tem **32 das 39 histórias** com parte no back e **14 das 15 do MVP** na `main`, com 814 testes automatizados e 95% de cobertura. O front-end está começando pelas telas do MVP. Veja a [Situação da entrega](acompanhamento/index.md).
+!!! success "Situação da entrega em 26/10/2026"
+    O back-end tem **38 das 39 histórias** com parte no back e **as 15 do MVP** na `main`, com 1039 testes automatizados e 100% de cobertura. O front-end está começando pelas telas do MVP. Veja a [Situação da entrega](acompanhamento/index.md).
 
 ---
 
@@ -90,3 +90,4 @@ graph LR
 | 1.1 | 13/09/2026 | Visão geral do produto e perfis de acesso. | Gabriela Tiago de Araújo |
 | 1.2 | 25/10/2026 | Resumo da situação da entrega e mapa completo da documentação; inclusão do histórico de versão. | Mateus Vieira |
 | 1.3 | 25/10/2026 | Seção PC2 no mapa da documentação. | Mateus Vieira |
+| 1.4 | 26/10/2026 | Resumo da situação da entrega atualizado para 26/10. | Ciro Costa |

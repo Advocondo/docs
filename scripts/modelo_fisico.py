@@ -76,9 +76,11 @@ GROUPS = {
     ],
     "Acordos e cobrança": [
         "condominiums", "debtors", "agreements", "installments",
-        "installment_payments", "lawyer_assignments", "agreement_edit_logs",
-        "agreement_pdfs",
+        "installment_payments", "installment_change_logs", "lawyer_assignments",
+        "agreement_edit_logs", "agreement_pdfs", "agreement_documents",
+        "agreement_document_files",
     ],
+    "Notificações": ["notifications"],
     "Página institucional": ["landing_blocks", "landing_images"],
 }
 
