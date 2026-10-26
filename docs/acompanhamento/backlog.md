@@ -116,7 +116,7 @@ Trabalho necessário que não corresponde a uma história de usuário.
 | Migrations com Alembic | back | **Entregue** em 14/10 · [#52](https://github.com/Advocondo/back/pull/52) |
 | Teste que impede duas *heads* do Alembic | back | **Entregue** em 22/10 · [#75](https://github.com/Advocondo/back/pull/75), [#91](https://github.com/Advocondo/back/pull/91) |
 | Limpeza diária de sessões e links de redefinição expirados | back | **Entregue** em 25/10 · [#92](https://github.com/Advocondo/back/pull/92) |
-| Backup e estratégia de recuperação do banco | back | Issue [#44](https://github.com/Advocondo/back/issues/44) fechada em 25/10 sem PR nem documentação: falta confirmar se o backup existe (ver [Pendências e riscos](pendencias.md#riscos)) |
+| Backup e estratégia de recuperação do banco | back | Issue [#44](https://github.com/Advocondo/back/issues/44) fechada em 25/10 sem PR: o comentário dela diz que o Coolify faz backup automático a cada 30 dias. Falta a restauração documentada (ver [Pendências e riscos](pendencias.md#riscos)) |
 | Deploy contínuo do front na Vercel | front | Pendente · [issue #40](https://github.com/Advocondo/front/issues/40) |
 | Variáveis de ambiente do front na Vercel | front | Pendente · [issue #41](https://github.com/Advocondo/front/issues/41) |
 | Testes E2E (Playwright/Selenium) | front | Pendente · [issue #42](https://github.com/Advocondo/front/issues/42) |
@@ -142,7 +142,7 @@ Correções dos riscos encontrados na conferência de 25/10 ([Pendências e risc
 | --- | --- | --- |
 | Testes da [US08](../historias/ep02-usuarios-perfis.md#us08) pela rota | R4 | **Entregue** em 26/10 · [#107](https://github.com/Advocondo/back/pull/107) |
 | Testes e documentação dos painéis financeiros ([US32](../historias/ep05-comissoes-metas.md#us32)–[US35](../historias/ep05-comissoes-metas.md#us35)) | R3 | **Entregue** em 26/10 · [#109](https://github.com/Advocondo/back/pull/109) |
-| Checagens mortas no router de condomínios e documentação de usuários | R5, R7 | Em revisão · [#111](https://github.com/Advocondo/back/pull/111) |
+| Checagens mortas no router de condomínios e documentação de usuários | R5, R7 | **Entregue** em 26/10 · [#111](https://github.com/Advocondo/back/pull/111) |
 
 ---
 

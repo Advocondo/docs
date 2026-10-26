@@ -8,7 +8,7 @@ Documentação de requisitos do **sistema de gestão de acordos extrajudiciais**
 
 Esta documentação é a fonte única dos requisitos acordados com o cliente. Ela é versionada junto com o código, no repositório [Advocondo/docs](https://github.com/Advocondo/docs), e publicada automaticamente a cada alteração na branch `main`.
 
-!!! success "Situação da entrega em 25/10/2026"
+!!! success "Situação da entrega em 26/10/2026"
     O back-end tem **38 das 39 histórias** com parte no back e **as 15 do MVP** na `main`, com 1019 testes automatizados e 99% de cobertura. O front-end está começando pelas telas do MVP. Veja a [Situação da entrega](acompanhamento/index.md).
 
 ---
