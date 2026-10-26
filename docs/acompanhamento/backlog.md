@@ -143,6 +143,8 @@ Correções dos riscos encontrados na conferência de 25/10 ([Pendências e risc
 | Testes da [US08](../historias/ep02-usuarios-perfis.md#us08) pela rota | R4 | **Entregue** em 26/10 · [#107](https://github.com/Advocondo/back/pull/107) |
 | Testes e documentação dos painéis financeiros ([US32](../historias/ep05-comissoes-metas.md#us32)–[US35](../historias/ep05-comissoes-metas.md#us35)) | R3 | **Entregue** em 26/10 · [#109](https://github.com/Advocondo/back/pull/109) |
 | Checagens mortas no router de condomínios e documentação de usuários | R5, R7 | **Entregue** em 26/10 · [#111](https://github.com/Advocondo/back/pull/111) |
+| Meta única da US36 no painel da US32 e atraso do mês atual no dashboard | R1, R8 | **Entregue** em 26/10 · [#113](https://github.com/Advocondo/back/pull/113) |
+| Cobertura de 100% de linhas e ramos, exigida pelo CI | — | **Entregue** em 26/10 · [#115](https://github.com/Advocondo/back/pull/115) |
 
 ---
 
@@ -152,3 +154,4 @@ Correções dos riscos encontrados na conferência de 25/10 ([Pendências e risc
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 25/10/2026 | Criação da página com a situação das 40 histórias e dos itens de infraestrutura em 25/10/2026. | Mateus Vieira |
 | 1.1 | 26/10/2026 | Atualização para 26/10: US21, US22, US30, US31, US38 e US39 entregues no back, critérios com teste recontados, complementos [back#88](https://github.com/Advocondo/back/issues/88) e [back#89](https://github.com/Advocondo/back/issues/89) entregues, seção de qualidade e situação do backup. | Ciro Costa |
+| 1.2 | 26/10/2026 | Correções R1 e R8 ([#113](https://github.com/Advocondo/back/pull/113)) e cobertura de 100% ([#115](https://github.com/Advocondo/back/pull/115)) na seção de qualidade. | Ciro Costa |

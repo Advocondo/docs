@@ -4,7 +4,7 @@ Retrato do que foi construído até **26/10/2026**, conferido diretamente nos re
 
 !!! abstract "Resumo"
     - **Back-end:** 38 das 39 histórias que têm parte no back estão na `main`; falta a [US40](../historias/ep06-painel-cliente.md#us40). Do MVP, **15 de 15** estão entregues.
-    - **Qualidade:** 1019 testes automatizados passando, **99% de cobertura** e CI verde na `main`. A API tem 72 operações em 14 módulos.
+    - **Qualidade:** 1039 testes automatizados passando, **100% de cobertura** de linhas e ramos, exigida pelo CI, e CI verde na `main`. A API tem 71 operações em 14 módulos.
     - **Front-end:** a base do projeto e o CI estão prontos, mas nenhuma tela de história chegou à `main`. A primeira, a [US12](../historias/ep03-cadastro-acordos.md#us12), está em revisão.
     - **Rastreabilidade:** 78 dos 81 critérios de aceitação das histórias entregues têm teste automatizado que cita o critério pelo identificador.
 
@@ -74,7 +74,7 @@ Antes das histórias, a infraestrutura foi entregue em 30/09: CI, deploy, banco,
 ## Como os números foram obtidos
 
 - **Situação das histórias:** cada história tem uma issue no back e outra no front. Uma história conta como entregue quando a issue foi fechada pelo merge de um PR na `main`. Toda issue fechada do back tem esse PR.
-- **Testes e cobertura:** `uv run pytest` na `main` do back (commit `3de444f`, de 26/10) e o último run do CI na `main`.
+- **Testes e cobertura:** `uv run pytest` na `main` do back (commit `70776e9`, de 26/10) e o último run do CI na `main`.
 - **Critério com teste:** há pelo menos um teste cuja docstring ou id cita o critério (`"""US13-CA01"""`). É a convenção do time; um critério pode estar testado sem a marcação, e esses casos estão em [Pendências e riscos](pendencias.md).
 - **Rotas:** o esquema OpenAPI gerado pela própria API.
 
@@ -87,3 +87,4 @@ Antes das histórias, a infraestrutura foi entregue em 30/09: CI, deploy, banco,
 | 1.0 | 25/10/2026 | Criação da página com o retrato da entrega em 25/10/2026. | Mateus Vieira |
 | 1.1 | 25/10/2026 | Links para as páginas de Arquitetura e Banco de dados. | Mateus Vieira |
 | 1.2 | 26/10/2026 | Retrato atualizado para 26/10: 38 de 39 histórias no back, MVP completo no back, 1019 testes e 99% de cobertura, 78 de 81 critérios com teste. | Ciro Costa |
+| 1.3 | 26/10/2026 | Qualidade na `main` de 26/10: 1039 testes, 100% de cobertura exigida pelo CI e 71 operações. | Ciro Costa |

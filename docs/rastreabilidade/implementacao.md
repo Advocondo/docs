@@ -5,7 +5,7 @@ Esta matriz liga cada critério de aceitação ao módulo do back-end que o impl
 !!! info "Origem dos dados (26/10/2026)"
     - **Módulo e rotas:** esquema OpenAPI da API na `main` do [back-end](https://github.com/Advocondo/back) e páginas de referência em `docs/` desse repositório.
     - **Testes:** busca, em todos os arquivos `test_*.py`, pelo identificador do critério (`US13-CA01`) na docstring, no corpo ou no id de parametrização de cada teste. É a convenção do time para marcar o critério verificado.
-    - Os caminhos dos testes são relativos a `src/advocondo/`. Na `main` (commit [`3de444f`](https://github.com/Advocondo/back/tree/3de444f)), os 1019 testes passam, com 99% de cobertura.
+    - Os caminhos dos testes são relativos a `src/advocondo/`. Na `main` (commit [`70776e9`](https://github.com/Advocondo/back/tree/70776e9)), os 1039 testes passam, com 100% de cobertura de linhas e ramos.
 
 **Resumo:** dos 87 critérios, 81 pertencem a histórias já entregues no back, e **78** deles têm ao menos um teste que os cita. Os 3 restantes são o [US21-CA02](../historias/ep03-cadastro-acordos.md#us21), testado sem a marcação (o banco recusa apagar acordo com documentos), e os dois da [US39](../historias/ep06-painel-cliente.md#us39), cujos testes não citam o critério.
 
@@ -51,7 +51,7 @@ Esta matriz liga cada critério de aceitação ao módulo do back-end que o impl
 |  |  |  | [US09-CA02](../historias/ep02-usuarios-perfis.md#us09) | **2** · `users/test_users_integration.py` ×2 |
 | [US10](../historias/ep02-usuarios-perfis.md#us10) | `users` | `GET`/`PUT /users/{id}/condominiums` | [US10-CA01](../historias/ep02-usuarios-perfis.md#us10) | **3** · `users/test_users_integration.py` ×3 |
 |  |  |  | [US10-CA02](../historias/ep02-usuarios-perfis.md#us10) | **5** · `documentos/test_documentos_integration.py`, `painel_cliente/test_painel_cliente_integration.py`, `users/test_users_integration.py` ×3 |
-| [US11](../historias/ep02-usuarios-perfis.md#us11) | `users` | `GET /users/{id}/history` | [US11-CA01](../historias/ep02-usuarios-perfis.md#us11) | **8** · `users/test_users_integration.py` ×8 |
+| [US11](../historias/ep02-usuarios-perfis.md#us11) | `users` | `GET /users/{id}/history` | [US11-CA01](../historias/ep02-usuarios-perfis.md#us11) | **9** · `users/test_users_integration.py` ×9 |
 |  |  |  | [US11-CA02](../historias/ep02-usuarios-perfis.md#us11) | **2** · `users/test_users_integration.py` ×2 |
 
 ## EP03 · Cadastro de Acordos { #ep03 }
@@ -110,11 +110,11 @@ Esta matriz liga cada critério de aceitação ao módulo do back-end que o impl
 
 | História | Módulo | Rotas | Critério | Testes que o citam |
 | --- | --- | --- | --- | --- |
-| [US32](../historias/ep05-comissoes-metas.md#us32) | `painel_operacional` | `GET /operator-panel/financial` | [US32-CA01](../historias/ep05-comissoes-metas.md#us32) | **2** · `painel_operacional/test_painel_operacional_integration.py` ×2 |
+| [US32](../historias/ep05-comissoes-metas.md#us32) | `painel_operacional` | `GET /operator-panel/financial` | [US32-CA01](../historias/ep05-comissoes-metas.md#us32) | **3** · `painel_operacional/test_painel_operacional_integration.py` ×3 |
 |  |  |  | [US32-CA02](../historias/ep05-comissoes-metas.md#us32) | **2** · `painel_operacional/test_painel_operacional_integration.py` ×2 |
 | [US33](../historias/ep05-comissoes-metas.md#us33) | `painel_admin` | `GET /admin-panel/financial` | [US33-CA01](../historias/ep05-comissoes-metas.md#us33) | **1** · `painel_admin/test_painel_admin_integration.py` |
 |  |  |  | [US33-CA02](../historias/ep05-comissoes-metas.md#us33) | **1** · `painel_admin/test_painel_admin_integration.py` |
-| [US34](../historias/ep05-comissoes-metas.md#us34) | `painel_admin` | `GET /admin-panel/dashboard` | [US34-CA01](../historias/ep05-comissoes-metas.md#us34) | **2** · `painel_admin/test_painel_admin_integration.py` ×2 |
+| [US34](../historias/ep05-comissoes-metas.md#us34) | `painel_admin` | `GET /admin-panel/dashboard` | [US34-CA01](../historias/ep05-comissoes-metas.md#us34) | **3** · `painel_admin/test_painel_admin_integration.py` ×3 |
 |  |  |  | [US34-CA02](../historias/ep05-comissoes-metas.md#us34) | **2** · `painel_admin/test_painel_admin_integration.py` ×2 |
 | [US35](../historias/ep05-comissoes-metas.md#us35) | `painel_admin` | `GET /admin-panel/reports/export` | [US35-CA01](../historias/ep05-comissoes-metas.md#us35) | **4** · `painel_admin/test_painel_admin_integration.py` ×4 |
 |  |  |  | [US35-CA02](../historias/ep05-comissoes-metas.md#us35) | **3** · `painel_admin/test_painel_admin_integration.py` ×2, `painel_admin/test_painel_admin_unit.py` |
@@ -142,7 +142,6 @@ Rotas que não pertencem a uma história, mas sustentam a operação:
 | --- | --- |
 | `GET /health` · `GET /health/ready` | Health checks do container e do monitoramento externo |
 | `POST /setup` | Criação do primeiro Administrador depois do primeiro deploy (ver [Deploy](../infraestrutura/deploy.md)) |
-| `PATCH /users/{id}/monthly-goal` | Meta mensal gravada no usuário, usada pelo painel da US32. Duplica a meta da US36; ver [Pendências e riscos](../acompanhamento/pendencias.md#riscos). |
 | `POST /agreements/{id}/reactivate` | Reativa um acordo cancelado ([back#88](https://github.com/Advocondo/back/issues/88)), complemento da [US20](../historias/ep03-cadastro-acordos.md#us20) |
 | `GET /installments/{id}` · `GET /client-panel/agreements/{id}/installments` | Uma fatura pelo id e as faturas sem pagamento de um acordo para o Cliente ([back#89](https://github.com/Advocondo/back/issues/89)) |
 
@@ -158,3 +157,4 @@ Ao entregar uma história, marque cada critério nos testes, com a docstring `""
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 25/10/2026 | Criação da matriz requisito → código → teste a partir da `main` do back-end em 25/10/2026. | Mateus Vieira |
 | 1.1 | 26/10/2026 | Atualização para a `main` de 26/10: US21, US22, US30, US31, US38 e US39 entregues, testes da US08 e das US32–US35, e rotas de suporte de [back#88](https://github.com/Advocondo/back/issues/88) e [back#89](https://github.com/Advocondo/back/issues/89). | Ciro Costa |
+| 1.2 | 26/10/2026 | `main` em [`70776e9`](https://github.com/Advocondo/back/tree/70776e9): 1039 testes e 100% de cobertura; coluna de testes recontada e `PATCH /users/{id}/monthly-goal` removida das rotas de suporte. | Ciro Costa |
