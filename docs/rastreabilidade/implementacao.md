@@ -2,18 +2,18 @@
 
 Esta matriz liga cada critério de aceitação ao módulo do back-end que o implementa, às rotas da API e aos testes automatizados que o verificam. Ela completa a [matriz de rastreabilidade](matriz.md), que trata das dependências entre histórias.
 
-!!! info "Origem dos dados (25/10/2026)"
+!!! info "Origem dos dados (26/10/2026)"
     - **Módulo e rotas:** esquema OpenAPI da API na `main` do [back-end](https://github.com/Advocondo/back) e páginas de referência em `docs/` desse repositório.
     - **Testes:** busca, em todos os arquivos `test_*.py`, pelo identificador do critério (`US13-CA01`) na docstring, no corpo ou no id de parametrização de cada teste. É a convenção do time para marcar o critério verificado.
-    - Os caminhos dos testes são relativos a `src/advocondo/`. Na `main`, os 814 testes passam, com 95% de cobertura.
+    - Os caminhos dos testes são relativos a `src/advocondo/`. Na `main` (commit [`3de444f`](https://github.com/Advocondo/back/tree/3de444f)), os 1019 testes passam, com 99% de cobertura.
 
-**Resumo:** dos 87 critérios, 70 pertencem a histórias já entregues no back, e **59** deles têm ao menos um teste que os cita. Os 11 restantes são das histórias [US08](../historias/ep02-usuarios-perfis.md#us08) e [US32](../historias/ep05-comissoes-metas.md#us32)–[US35](../historias/ep05-comissoes-metas.md#us35), descritas em [Pendências e riscos](../acompanhamento/pendencias.md#riscos).
+**Resumo:** dos 87 critérios, 81 pertencem a histórias já entregues no back, e **78** deles têm ao menos um teste que os cita. Os 3 restantes são o [US21-CA02](../historias/ep03-cadastro-acordos.md#us21), testado sem a marcação (o banco recusa apagar acordo com documentos), e os dois da [US39](../historias/ep06-painel-cliente.md#us39), cujos testes não citam o critério.
 
 | Situação do critério | Quantidade |
 | --- | :---: |
-| História entregue e critério citado por teste | 59 |
-| História entregue, mas nenhum teste cita o critério | 11 |
-| História pendente ou em revisão no back | 14 |
+| História entregue e critério citado por teste | 78 |
+| História entregue, mas nenhum teste cita o critério | 3 |
+| História pendente no back ([US40](../historias/ep06-painel-cliente.md#us40)) | 3 |
 | História só de front ([US01](../historias/ep01-portal-autenticacao.md#us01)) | 3 |
 | **Total** | **87** |
 
@@ -44,9 +44,9 @@ Esta matriz liga cada critério de aceitação ao módulo do back-end que o impl
 |  |  |  | [US07-CA02](../historias/ep02-usuarios-perfis.md#us07) | **2** · `users/test_users_integration.py` ×2 |
 |  |  |  | [US07-CA03](../historias/ep02-usuarios-perfis.md#us07) | **3** · `users/test_users_integration.py` ×3 |
 |  |  |  | [US07-CA04](../historias/ep02-usuarios-perfis.md#us07) | **6** · `users/test_users_integration.py` ×6 |
-| [US08](../historias/ep02-usuarios-perfis.md#us08) | `users, auth` | `PATCH /users/{id}/status` | [US08-CA01](../historias/ep02-usuarios-perfis.md#us08) | :warning: nenhum teste cita o critério |
-|  |  |  | [US08-CA02](../historias/ep02-usuarios-perfis.md#us08) | :warning: nenhum teste cita o critério |
-|  |  |  | [US08-CA03](../historias/ep02-usuarios-perfis.md#us08) | :warning: nenhum teste cita o critério |
+| [US08](../historias/ep02-usuarios-perfis.md#us08) | `users, auth` | `PATCH /users/{id}/status` | [US08-CA01](../historias/ep02-usuarios-perfis.md#us08) | **1** · `users/test_users_integration.py` |
+|  |  |  | [US08-CA02](../historias/ep02-usuarios-perfis.md#us08) | **1** · `users/test_users_integration.py` |
+|  |  |  | [US08-CA03](../historias/ep02-usuarios-perfis.md#us08) | **1** · `users/test_users_integration.py` |
 | [US09](../historias/ep02-usuarios-perfis.md#us09) | `users` | `PATCH /users/{id}/role` | [US09-CA01](../historias/ep02-usuarios-perfis.md#us09) | **3** · `users/test_users_integration.py` ×3 |
 |  |  |  | [US09-CA02](../historias/ep02-usuarios-perfis.md#us09) | **2** · `users/test_users_integration.py` ×2 |
 | [US10](../historias/ep02-usuarios-perfis.md#us10) | `users` | `GET`/`PUT /users/{id}/condominiums` | [US10-CA01](../historias/ep02-usuarios-perfis.md#us10) | **3** · `users/test_users_integration.py` ×3 |
@@ -78,10 +78,10 @@ Esta matriz liga cada critério de aceitação ao módulo do back-end que o impl
 |  |  |  | [US19-CA02](../historias/ep03-cadastro-acordos.md#us19) | **2** · `acordos/test_acordos_integration.py` ×2 |
 | [US20](../historias/ep03-cadastro-acordos.md#us20) | `acordos` | `POST /agreements/{id}/cancel` | [US20-CA01](../historias/ep03-cadastro-acordos.md#us20) | **1** · `parcelas/test_parcelas_integration.py` |
 |  |  |  | [US20-CA02](../historias/ep03-cadastro-acordos.md#us20) | **1** · `parcelas/test_parcelas_integration.py` |
-| [US21](../historias/ep03-cadastro-acordos.md#us21) | `documentos` | PR [#98](https://github.com/Advocondo/back/pull/98) em revisão | [US21-CA01](../historias/ep03-cadastro-acordos.md#us21) | história pendente |
-|  |  |  | [US21-CA02](../historias/ep03-cadastro-acordos.md#us21) | história pendente |
-| [US22](../historias/ep03-cadastro-acordos.md#us22) | `acordos` | `GET /agreements` já filtra por status, condomínio, devedor e advogado; falta a busca por texto | [US22-CA01](../historias/ep03-cadastro-acordos.md#us22) | história pendente |
-|  |  |  | [US22-CA02](../historias/ep03-cadastro-acordos.md#us22) | história pendente |
+| [US21](../historias/ep03-cadastro-acordos.md#us21) | `documentos` | `POST`/`GET /agreements/{id}/documents` · `GET /agreements/{id}/documents/{document_id}` | [US21-CA01](../historias/ep03-cadastro-acordos.md#us21) | **17** · `documentos/test_documentos_integration.py` ×9, `documentos/test_documentos_unit.py` ×8 |
+|  |  |  | [US21-CA02](../historias/ep03-cadastro-acordos.md#us21) | :warning: nenhum teste cita o critério |
+| [US22](../historias/ep03-cadastro-acordos.md#us22) | `acordos` | `GET /agreements` (`search` e filtros) | [US22-CA01](../historias/ep03-cadastro-acordos.md#us22) | **1** · `acordos/test_acordos_integration.py` |
+|  |  |  | [US22-CA02](../historias/ep03-cadastro-acordos.md#us22) | **2** · `acordos/test_acordos_integration.py` ×2 |
 | [US23](../historias/ep03-cadastro-acordos.md#us23) | `condominios` | campos de contrato e renovação em `/condominiums` | [US23-CA01](../historias/ep03-cadastro-acordos.md#us23) | **8** · `condominios/test_condominios_integration.py` ×4, `condominios/test_condominios_unit.py` ×4 |
 |  |  |  | [US23-CA02](../historias/ep03-cadastro-acordos.md#us23) | **1** · `condominios/test_condominios_integration.py` |
 | [US24](../historias/ep03-cadastro-acordos.md#us24) | `documentos` | `POST`/`GET /agreements/{id}/pdfs` · `GET /agreements/{id}/pdfs/{pdf_id}` | [US24-CA01](../historias/ep03-cadastro-acordos.md#us24) | **3** · `documentos/test_documentos_integration.py` ×2, `documentos/test_documentos_unit.py` |
@@ -97,27 +97,27 @@ Esta matriz liga cada critério de aceitação ao módulo do back-end que o impl
 | [US26](../historias/ep04-parcelas.md#us26) | `parcelas` | `POST`/`PUT`/`DELETE /installments/{id}/payment` | [US26-CA01](../historias/ep04-parcelas.md#us26) | **3** · `parcelas/test_parcelas_integration.py` ×2, `parcelas/test_parcelas_unit.py` |
 |  |  |  | [US26-CA02](../historias/ep04-parcelas.md#us26) | **7** · `parcelas/test_parcelas_integration.py` ×5, `parcelas/test_parcelas_unit.py` ×2 |
 | [US27](../historias/ep04-parcelas.md#us27) | `parcelas` | situação calculada em `parcelas/status.py`, exposta nas listagens | [US27-CA01](../historias/ep04-parcelas.md#us27) | **5** · `common/test_common_unit.py`, `parcelas/test_parcelas_integration.py` ×2, `parcelas/test_parcelas_unit.py` ×2 |
-| [US28](../historias/ep04-parcelas.md#us28) | `parcelas` | `POST /installments/{id}/payment` (com `amount`) · `GET /installments/{id}/payments` | [US28-CA01](../historias/ep04-parcelas.md#us28) | **3** · `parcelas/test_parcelas_integration.py` ×2, `parcelas/test_parcelas_unit.py` |
+| [US28](../historias/ep04-parcelas.md#us28) | `parcelas` | `POST /installments/{id}/payment` (com `amount`) · `GET /installments/{id}/payments` | [US28-CA01](../historias/ep04-parcelas.md#us28) | **4** · `notificacoes/test_notificacoes_integration.py`, `parcelas/test_parcelas_integration.py` ×2, `parcelas/test_parcelas_unit.py` |
 |  |  |  | [US28-CA02](../historias/ep04-parcelas.md#us28) | **1** · `parcelas/test_parcelas_integration.py` |
 | [US29](../historias/ep04-parcelas.md#us29) | `parcelas` | `PUT /installments/{id}/invoice` · `GET /installments/paid-without-invoice` | [US29-CA01](../historias/ep04-parcelas.md#us29) | **3** · `parcelas/test_parcelas_integration.py` ×2, `parcelas/test_parcelas_unit.py` |
 |  |  |  | [US29-CA02](../historias/ep04-parcelas.md#us29) | **1** · `parcelas/test_parcelas_integration.py` |
-| [US30](../historias/ep04-parcelas.md#us30) | — | — | [US30-CA01](../historias/ep04-parcelas.md#us30) | história pendente |
-|  |  |  | [US30-CA02](../historias/ep04-parcelas.md#us30) | história pendente |
-| [US31](../historias/ep04-parcelas.md#us31) | — | — | [US31-CA01](../historias/ep04-parcelas.md#us31) | história pendente |
-|  |  |  | [US31-CA02](../historias/ep04-parcelas.md#us31) | história pendente |
+| [US30](../historias/ep04-parcelas.md#us30) | `notificacoes` | `GET /notifications` · `POST /notifications/{id}/read` · `POST /notifications/read` · comando diário `python -m advocondo.notificacoes.overdue` | [US30-CA01](../historias/ep04-parcelas.md#us30) | **3** · `notificacoes/test_notificacoes_integration.py` ×2, `notificacoes/test_notificacoes_unit.py` |
+|  |  |  | [US30-CA02](../historias/ep04-parcelas.md#us30) | **1** · `notificacoes/test_notificacoes_integration.py` |
+| [US31](../historias/ep04-parcelas.md#us31) | `parcelas` | `GET /agreements/{id}/financial-history` | [US31-CA01](../historias/ep04-parcelas.md#us31) | **5** · `parcelas/test_parcelas_integration.py` ×5 |
+|  |  |  | [US31-CA02](../historias/ep04-parcelas.md#us31) | **2** · `parcelas/test_parcelas_integration.py` ×2 |
 
 ## EP05 · Comissões e Metas { #ep05 }
 
 | História | Módulo | Rotas | Critério | Testes que o citam |
 | --- | --- | --- | --- | --- |
-| [US32](../historias/ep05-comissoes-metas.md#us32) | `painel_operacional` | `GET /operator-panel/financial` | [US32-CA01](../historias/ep05-comissoes-metas.md#us32) | :warning: nenhum teste cita o critério |
-|  |  |  | [US32-CA02](../historias/ep05-comissoes-metas.md#us32) | :warning: nenhum teste cita o critério |
-| [US33](../historias/ep05-comissoes-metas.md#us33) | `painel_admin` | `GET /admin-panel/financial` | [US33-CA01](../historias/ep05-comissoes-metas.md#us33) | :warning: nenhum teste cita o critério |
-|  |  |  | [US33-CA02](../historias/ep05-comissoes-metas.md#us33) | :warning: nenhum teste cita o critério |
-| [US34](../historias/ep05-comissoes-metas.md#us34) | `painel_admin` | `GET /admin-panel/dashboard` | [US34-CA01](../historias/ep05-comissoes-metas.md#us34) | :warning: nenhum teste cita o critério |
-|  |  |  | [US34-CA02](../historias/ep05-comissoes-metas.md#us34) | :warning: nenhum teste cita o critério |
-| [US35](../historias/ep05-comissoes-metas.md#us35) | `painel_admin` | `GET /admin-panel/reports/export` | [US35-CA01](../historias/ep05-comissoes-metas.md#us35) | :warning: nenhum teste cita o critério |
-|  |  |  | [US35-CA02](../historias/ep05-comissoes-metas.md#us35) | :warning: nenhum teste cita o critério |
+| [US32](../historias/ep05-comissoes-metas.md#us32) | `painel_operacional` | `GET /operator-panel/financial` | [US32-CA01](../historias/ep05-comissoes-metas.md#us32) | **2** · `painel_operacional/test_painel_operacional_integration.py` ×2 |
+|  |  |  | [US32-CA02](../historias/ep05-comissoes-metas.md#us32) | **2** · `painel_operacional/test_painel_operacional_integration.py` ×2 |
+| [US33](../historias/ep05-comissoes-metas.md#us33) | `painel_admin` | `GET /admin-panel/financial` | [US33-CA01](../historias/ep05-comissoes-metas.md#us33) | **1** · `painel_admin/test_painel_admin_integration.py` |
+|  |  |  | [US33-CA02](../historias/ep05-comissoes-metas.md#us33) | **1** · `painel_admin/test_painel_admin_integration.py` |
+| [US34](../historias/ep05-comissoes-metas.md#us34) | `painel_admin` | `GET /admin-panel/dashboard` | [US34-CA01](../historias/ep05-comissoes-metas.md#us34) | **2** · `painel_admin/test_painel_admin_integration.py` ×2 |
+|  |  |  | [US34-CA02](../historias/ep05-comissoes-metas.md#us34) | **2** · `painel_admin/test_painel_admin_integration.py` ×2 |
+| [US35](../historias/ep05-comissoes-metas.md#us35) | `painel_admin` | `GET /admin-panel/reports/export` | [US35-CA01](../historias/ep05-comissoes-metas.md#us35) | **4** · `painel_admin/test_painel_admin_integration.py` ×4 |
+|  |  |  | [US35-CA02](../historias/ep05-comissoes-metas.md#us35) | **3** · `painel_admin/test_painel_admin_integration.py` ×2, `painel_admin/test_painel_admin_unit.py` |
 | [US36](../historias/ep05-comissoes-metas.md#us36) | `metas` | `PUT /users/{id}/goals/{year}/{month}` · `GET /goals/me` | [US36-CA01](../historias/ep05-comissoes-metas.md#us36) | **16** · `metas/test_metas_integration.py` ×10, `metas/test_metas_unit.py` ×6 |
 |  |  |  | [US36-CA02](../historias/ep05-comissoes-metas.md#us36) | **4** · `metas/test_metas_integration.py` ×4 |
 
@@ -127,9 +127,9 @@ Esta matriz liga cada critério de aceitação ao módulo do back-end que o impl
 | --- | --- | --- | --- | --- |
 | [US37](../historias/ep06-painel-cliente.md#us37) | `painel_cliente` | `GET /client-panel/agreements` | [US37-CA01](../historias/ep06-painel-cliente.md#us37) | **1** · `painel_cliente/test_painel_cliente_integration.py` |
 |  |  |  | [US37-CA02](../historias/ep06-painel-cliente.md#us37) | **2** · `painel_cliente/test_painel_cliente_integration.py` ×2 |
-| [US38](../historias/ep06-painel-cliente.md#us38) | — | — | [US38-CA01](../historias/ep06-painel-cliente.md#us38) | história pendente |
-| [US39](../historias/ep06-painel-cliente.md#us39) | — | — | [US39-CA01](../historias/ep06-painel-cliente.md#us39) | história pendente |
-|  |  |  | [US39-CA02](../historias/ep06-painel-cliente.md#us39) | história pendente |
+| [US38](../historias/ep06-painel-cliente.md#us38) | `painel_cliente` | `GET /client-panel/debtors/{id}/history` | [US38-CA01](../historias/ep06-painel-cliente.md#us38) | **3** · `painel_cliente/test_painel_cliente_integration.py` ×3 |
+| [US39](../historias/ep06-painel-cliente.md#us39) | `painel_cliente` | `GET /client-panel/condominiums/{id}/report` | [US39-CA01](../historias/ep06-painel-cliente.md#us39) | :warning: nenhum teste cita o critério |
+|  |  |  | [US39-CA02](../historias/ep06-painel-cliente.md#us39) | :warning: nenhum teste cita o critério |
 | [US40](../historias/ep06-painel-cliente.md#us40) | — | — | [US40-CA01](../historias/ep06-painel-cliente.md#us40) | história pendente |
 |  |  |  | [US40-CA02](../historias/ep06-painel-cliente.md#us40) | história pendente |
 |  |  |  | [US40-CA03](../historias/ep06-painel-cliente.md#us40) | história pendente |
@@ -143,6 +143,8 @@ Rotas que não pertencem a uma história, mas sustentam a operação:
 | `GET /health` · `GET /health/ready` | Health checks do container e do monitoramento externo |
 | `POST /setup` | Criação do primeiro Administrador depois do primeiro deploy (ver [Deploy](../infraestrutura/deploy.md)) |
 | `PATCH /users/{id}/monthly-goal` | Meta mensal gravada no usuário, usada pelo painel da US32. Duplica a meta da US36; ver [Pendências e riscos](../acompanhamento/pendencias.md#riscos). |
+| `POST /agreements/{id}/reactivate` | Reativa um acordo cancelado ([back#88](https://github.com/Advocondo/back/issues/88)), complemento da [US20](../historias/ep03-cadastro-acordos.md#us20) |
+| `GET /installments/{id}` · `GET /client-panel/agreements/{id}/installments` | Uma fatura pelo id e as faturas sem pagamento de um acordo para o Cliente ([back#89](https://github.com/Advocondo/back/issues/89)) |
 
 ## Manutenção desta página
 
@@ -155,3 +157,4 @@ Ao entregar uma história, marque cada critério nos testes, com a docstring `""
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 25/10/2026 | Criação da matriz requisito → código → teste a partir da `main` do back-end em 25/10/2026. | Mateus Vieira |
+| 1.1 | 26/10/2026 | Atualização para a `main` de 26/10: US21, US22, US30, US31, US38 e US39 entregues, testes da US08 e das US32–US35, e rotas de suporte de [back#88](https://github.com/Advocondo/back/issues/88) e [back#89](https://github.com/Advocondo/back/issues/89). | Ciro Costa |
