@@ -29,8 +29,12 @@ REFERENCE = {
     "debtors": "devedores.md",
     "agreements": "acordos.md",
     "agreement-pdfs": "documentos.md",
+    "documents": "documentos.md",
     "installments": "parcelas.md",
+    "notifications": "notificacoes.md",
     "client-panel": "painel-cliente.md",
+    "operator-panel": "paineis-financeiros.md",
+    "admin-panel": "paineis-financeiros.md",
     "landing": "landing.md",
     "health": "observabilidade.md",
 }
