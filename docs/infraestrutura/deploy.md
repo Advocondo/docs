@@ -43,7 +43,7 @@ O [Coolify](https://coolify.io) roda em uma instância da Oracle Cloud e faz o b
 - **Imagem:** `Dockerfile.prod`, um build multi-stage com `uv`. A imagem final roda como usuário não-root e sobe a API com `python -m advocondo` na porta `8000`.
 - **Banco de dados:** o PostgreSQL também é um recurso do mesmo Coolify, na mesma instância. O back-end se conecta a ele pela `DATABASE_URL`.
 - **Variáveis de ambiente:** são configuradas no painel do Coolify, e não no repositório. O `.env.example` lista as variáveis esperadas.
-- **Migrations:** o schema do banco é atualizado pelo Alembic. Configure no Coolify o *Pre-deployment command* do back-end como `alembic upgrade head`, para que as migrations rodem antes de cada nova versão da API subir. Elas não rodam sozinhas.
+- **Migrations:** o próprio container do back-end aplica as migrations ao subir (`alembic upgrade head` antes da API, no `CMD` do `Dockerfile.prod`). Se uma migration falhar, o container novo não sobe e o Coolify mantém o anterior. **Os campos *Pre-deployment* e *Post-deployment* do Coolify ficam vazios**: o *Pre-deployment* roda no container antigo, que não tem as migrations novas, e o *Post-deployment* roda só depois de o deploy ser dado como concluído ([documentação do Coolify](https://coolify.io/docs/applications/build-packs/dockerfile)). Detalhes em `docs/migracoes.md`, no repositório do back-end.
 - **Verificação:** a rota `GET /health` confirma se a API está no ar, e `GET /health/ready` também verifica o banco.
 
 ### Variáveis de ambiente do back-end
@@ -83,8 +83,9 @@ Ao terminar, o comando mostra no log quantas sessões e links apagou. Os detalhe
 ### Checklist de cada deploy do back-end
 
 1. Conferir se o PR acrescentou variáveis ao `.env.example` e cadastrá-las no Coolify antes do merge.
-2. Confirmar que o *Pre-deployment command* é `alembic upgrade head`.
-3. Depois do deploy, abrir `GET /health/ready` e conferir se a resposta é `200`.
+2. Confirmar que os campos *Pre-deployment* e *Post-deployment* estão vazios e que o health check da aplicação (`/health`) está ligado.
+3. Se o PR trouxe migration, conferir no log do deploy as linhas `Running upgrade … -> …` do Alembic.
+4. Depois do deploy, abrir `GET /health/ready` e conferir se a resposta é `200`.
 
 ### Primeiro deploy: criar o Administrador
 
@@ -122,3 +123,4 @@ Pronto: é só fazer login no front com esse e-mail e essa senha.
 | 1.2 | 14/10/2026 | Primeiro Administrador criado pela rota POST /setup. | Gabriela Tiago de Araújo |
 | 1.3 | 14/10/2026 | Simplificação dos passos do primeiro Administrador. | Gabriela Tiago de Araújo |
 | 1.4 | 25/10/2026 | Variáveis de ambiente exigidas pelo back-end, tarefa diária de limpeza e checklist de deploy; inclusão do histórico de versão. | Mateus Vieira |
+| 1.5 | 26/10/2026 | Migrations aplicadas pelo container ao subir, e não mais pelo *Pre-deployment command* do Coolify ([back#118](https://github.com/Advocondo/back/pull/118)). | Ciro Costa |
