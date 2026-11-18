@@ -39,6 +39,9 @@ nav = [
     { "API externa" = "pc2/api-externa.md" },
     { "Lint e análise estática" = "pc2/lint.md" },
   ]},
+  { "PC3 · Evidências" = [
+    { "Visão geral" = "pc3/index.md" },
+  ]},
   { "Rastreabilidade" = [
     { "Matriz de rastreabilidade" = "rastreabilidade/matriz.md" },
     { "Requisito → código → teste" = "rastreabilidade/implementacao.md" },
